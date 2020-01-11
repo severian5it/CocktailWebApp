@@ -22,14 +22,25 @@ function writeToDocument(url) {
         data.forEach(function(item) {
             var dataRow = [];
 
-            dataRow.push(`<td>${item.strDrink}</td>`);
-            dataRow.push(`<td><img src=${item.strDrinkThumb}></td>`);
-            dataRow.push(`<td><p class="hidden">${item.idDrink}</p></td>`);
-            tableRows.push(`<tr>${dataRow}</tr>`);
+            //dataRow.push(`<td>${item.strDrink}</td>`);
+            //dataRow.push(`<td><img src=${item.strDrinkThumb}></td>`);
+            //dataRow.push(`<td><p class="hidden">${item.idDrink}</p></td>`);
+            //tableRows.push(`<tr>${dataRow}</tr>`);
+            dataRow.push('<div style="float: left">')
+            dataRow.push('<div class="card">')
+            dataRow.push('<div class="image card-img-top">')
+            dataRow.push(`<img src=${item.strDrinkThumb} height=200 width=200 onclick="openGalleryModal()">`)
+            dataRow.push('</div>')
+            dataRow.push('<div class="card-body">')
+            dataRow.push(`<h4 class="card-title">${item.strDrink}</h4>`)
+            dataRow.push('</div>')
+            dataRow.push('</div>')
+            dataRow.push('</div>')
+            tableRows.push(`${dataRow}`);
         });
 
-        el.innerHTML = `<table>${tableRows}</table>`.replace(/,/g, "");;
-        console.log(`<table>${tableRows}</table>`)
+        //el.innerHTML = `<table>${tableRows}</table>`.replace(/,/g, "");;
+        el.innerHTML = `${tableRows}`.replace(/,/g, "");
 
     });
 }

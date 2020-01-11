@@ -5,6 +5,10 @@
         <title>Cocktail Web Search Engine</title>
         <script src="src/js/main.js" type="text/javascript"></script>
         <link href="src/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
         <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka')">Vodka</button>
@@ -17,6 +21,7 @@
             <input type="text" id="toSearch"/>
             <button type="submit" onclick="searchSubmit()">GO</button>
         </div>
+        <br>
         <div id="data"></div>
     </body>
 </html>

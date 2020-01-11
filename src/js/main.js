@@ -1,6 +1,4 @@
-const baseURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
-
-function getData(type, cb) {
+function getData(url, cb) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -9,20 +7,40 @@ function getData(type, cb) {
         }
     };
 
-    xhr.open("GET", baseURL + type);
+    xhr.open("GET", url);
     xhr.send();
 }
 
-function writeToDocument(type) {
+function getTableHeaders(obj) {
+    var tableHeaders = [];
+
+    Object.keys(obj).forEach(function(key) {
+        tableHeaders.push(`<td>${key}</td>`);
+    });
+
+    return `<tr>${tableHeaders}</tr>`;
+}
+
+function writeToDocument(url) {
+    var tableRows = [];
     var el = document.getElementById("data");
-    el.innerHTML = "";
 
-    getData(type, function(data) {
+    getData(url, function(data) {
         data = data.drinks;
-        data.forEach(function(item) {
-            el.innerHTML += "<p>" + item.strDrink + "</p>";
-        });
-        console.log('here', data)
+        var tableHeaders = getTableHeaders(data[0]);
 
+        data.forEach(function(item) {
+            var dataRow = [];
+            console.log('data', data)
+            console.log('item', item)
+            console.log('Object', Object)
+
+            dataRow.push(`<td>${item.strDrink}</td>`);
+            dataRow.push(`<td><img src=${item.strDrinkThumb}></td>`);
+            dataRow.push(`<td><p class="hidden">${item.idDrink}</p></td>`);
+            tableRows.push(`<tr>${dataRow}</tr>`);
+        });
+
+        el.innerHTML = `<table>${tableHeaders}${tableRows}</table>`;
     });
 }

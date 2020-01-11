@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Cocktail Web Search Engine</title>
-    <script type="text/javascript" src="src/js/main.js"></script>
-    <link rel="stylesheet" href="src/css/style.css" type="text/css"/>
-
-</head>
-
-<body>
-    <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka')">Vodka</button>
-    <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin')">Gin</button>
-    <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Rum')">Rum</button>
-    <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Cognac')">Cognac</button>
-    <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Whiskey')">Whiskey</button>
-    <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Coffee')">Coffee</button>
-    <div id="data"></div></body>
-
+    <head>
+        <title>Cocktail Web Search Engine</title>
+        <script src="src/js/main.js" type="text/javascript"></script>
+        <link href="src/css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka')">Vodka</button>
+        <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin')">Gin</button>
+        <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Rum')">Rum</button>
+        <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Cognac')">Cognac</button>
+        <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Whiskey')">Whiskey</button>
+        <button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Coffee')">Coffee</button>
+        <div class="main" id ="searchBox">
+            <input type="text" id="toSearch"/>
+            <button type="submit" onclick="searchSubmit()">GO</button>
+        </div>
+        <div id="data"></div>
+    </body>
 </html>

@@ -16,7 +16,7 @@ body{
   border: 3px solid #00B4CC;
   border-right: none;
   padding: 5px;
-  height: 20px;
+  height: 36px;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
@@ -45,6 +45,11 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.wrapafter{
+  width: 30%;
+  left: 50%;
 }
 
 .hidden {

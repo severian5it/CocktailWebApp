@@ -5,12 +5,15 @@
     <title>Cocktail Web Search Engine</title>
     <script src="src/js/main.js" type="text/javascript"></script>
     <link href="src/css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="src/images/cocktail.ico">
+    <script src="https://kit.fontawesome.com/2634de6a5c.js" crossorigin="anonymous"></script>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+<!--*******NAVBAR*******-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -23,29 +26,37 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link" data-toggle="modal" data-target="#modalContactForm">Contact</a>
             </li>
         </ul>
     </div>
 </nav>
-<div class="wrap">
-   <div class="search main" id="searchBox">
-      <input type="text" class="searchTerm" id="toSearch" placeholder="What ingredient do you have?">
-      <button type="submit" class="searchButton" onclick="searchSubmit()">
-        <i class="fa fa-search"></i>
-     </button>
-   </div>
-</div>
-<br>
-<div id="data"></div>
+<!--*******SEARCH BAR*******-->
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+<section id="SearchBar">
+    <div class="container-fluid">
+        <div class="wrap" id="wrapper">
+            <div class="search main" id="searchBox">
+                <input type="text" class="searchTerm" id="toSearch" placeholder="What ingredient do you have?">
+                <button type="submit" class="searchButton" onclick="searchSubmit()">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--*******RESULTS*******-->
+
+<br><br><br><br>
+<section id="results">
+    <div class="container-fluid">
+        <div id="data"></div>
+    </div>
+</section>
+<!--*******MODAL DETAILS*******-->
+
+<div class="modal fade" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -65,11 +76,58 @@
         </div>
     </div>
 </div>
-  <footer class="footer py-4 bg-dark text-white-50">
-    <div class="container text-center">
-      <small>Copyright &copy; Your Website</small>
+<!--*******Contacts*******-->
+
+<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form34" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form34">Your name</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Your email</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <input type="text" id="form32" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form32">Subject</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fas fa-pencil prefix grey-text"></i>
+          <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+          <label data-error="wrong" data-success="right" for="form8">Your message</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-default">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
     </div>
-  </footer>
+  </div>
+</div>
+
+<!--*******FOOTER*******-->
+
+<footer class="footer py-4 bg-dark text-white-50">
+    <div class="container text-center">
+        <small>Copyright &copy; Your Website</small>
+    </div>
+</footer>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

@@ -51,6 +51,8 @@ function searchSubmit() {
   let url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
   var inputVal = document.getElementById("toSearch").value;
   writeToDocument(url + inputVal)
+  document.getElementById("wrapper").classList.add('wrapafter');
+  document.getElementById("wrapper").classList.remove('wrap');
 }
 
 
@@ -82,7 +84,7 @@ function writeToModal(url) {
     let url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
     console.log(url+id)
     writeToModal(url+id)
-    $('.modal').modal('show');
+    $('#modalDetails').modal('show');
 
 }
 

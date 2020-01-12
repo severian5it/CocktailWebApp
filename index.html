@@ -3,7 +3,6 @@
 
 <head>
     <title>Cocktail Web Search Engine</title>
-    <script src="src/js/main.js" type="text/javascript"></script>
     <link href="src/css/style.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" href="src/images/cocktail.ico">
     <script src="https://kit.fontawesome.com/2634de6a5c.js" crossorigin="anonymous"></script>
@@ -11,11 +10,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_6QWtZ07QnotlGgzAFHDng");
+       })();
+    </script>
 </head>
 <body>
 <!--*******NAVBAR*******-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">CocktailsDB</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -115,7 +120,7 @@
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-default">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+        <button class="btn btn-default" onclick="sendMail(this)">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
       </div>
     </div>
   </div>
@@ -128,6 +133,8 @@
         <small>Copyright &copy; Your Website</small>
     </div>
 </footer>
+<script src="src/js/main.js" type="text/javascript"></script>
+<script src="src/js/mail.js" type="text/javascript"></script>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

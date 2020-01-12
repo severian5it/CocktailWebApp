@@ -29,7 +29,7 @@ function writeToDocument(url) {
             but regardless, table seems fine if the data is tabular (like a spreadsheet). otherwise use divs, make them float (or display inline), compute their width as a 1/4 of that of
             the page/container width and they should all self arrange in rows having 4 cols each.
              */
-            dataRow.push('<div style="float: left">')
+            dataRow.push('<div class="cocktail-results">')
             dataRow.push('<div class="card">')
             dataRow.push('<div class="image">')
             dataRow.push(`<img src=${item.strDrinkThumb} height=200 width=300 onclick="openGalleryModal(${item.idDrink})">`)

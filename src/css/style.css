@@ -92,3 +92,8 @@ img:hover {
 .card {
     height: 280px
 }
+
+.cocktail-results {
+  float: left;
+  padding: 10px
+}

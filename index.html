@@ -34,15 +34,13 @@
         </ul>
     </div>
 </nav>
-<button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka')">Vodka</button>
-<button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin')">Gin</button>
-<button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Rum')">Rum</button>
-<button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Cognac')">Cognac</button>
-<button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Whiskey')">Whiskey</button>
-<button onclick="writeToDocument('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Coffee')">Coffee</button>
-<div class="main" id="searchBox">
-    <input type="text" id="toSearch"/>
-    <button type="submit" onclick="searchSubmit()">GO</button>
+<div class="wrap">
+   <div class="search main" id="searchBox">
+      <input type="text" class="searchTerm" id="toSearch" placeholder="What ingredient do you have?">
+      <button type="submit" class="searchButton" onclick="searchSubmit()">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
 </div>
 <br>
 <div id="data"></div>

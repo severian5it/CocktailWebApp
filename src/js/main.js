@@ -63,16 +63,8 @@ function writeToModal(url) {
 
         data.forEach(function(item) {
             var dataRow = [];
-
-            //dataRow.push(`<td>${item.strDrink}</td>`);
-            //dataRow.push(`<td><img src=${item.strDrinkThumb}></td>`);
-            //dataRow.push(`<td><p class="hidden">${item.idDrink}</p></td>`);
-            //tableRows.push(`<tr>${dataRow}</tr>`);
-            /*
-            but regardless, table seems fine if the data is tabular (like a spreadsheet). otherwise use divs, make them float (or display inline), compute their width as a 1/4 of that of
-            the page/container width and they should all self arrange in rows having 4 cols each.
-            */
-            dataRow.push(`<p class="card-title">${item.strInstructions}</p>`)
+            dataRow.push(`<h4>${item.strDrink}</h4>`)
+            dataRow.push(`<p>${item.strInstructions}</p>`)
             tableRows.push(`${dataRow}`);
         });
 

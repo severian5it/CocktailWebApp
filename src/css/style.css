@@ -61,6 +61,12 @@ body{
   transform: translate(-50%, -50%);
 }
 
+.wrapafter{
+  width: 30%;
+  left: 50%;
+
+}
+
 .hidden {
     display: none;
 }
@@ -106,7 +112,6 @@ img:hover {
 
 .card-title {
     text-align: center;
-    width: 200px;
 }
 
 .card {

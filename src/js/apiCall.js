@@ -33,7 +33,7 @@ function writeToDocument(url) {
             dataRow.push('<div class="col-sm-6 col-md-4 col-lg-2 cocktail-results">')
             dataRow.push('<div class="card">')
             dataRow.push('<div class="image">')
-            dataRow.push(`<img src=${item.strDrinkThumb} height=200 width=300 onclick="openGalleryModal(${item.idDrink})">`)
+            dataRow.push(`<img src=${item.strDrinkThumb} onclick="openGalleryModal(${item.idDrink})">`)
             dataRow.push('</div>')
             dataRow.push('<div class="card-body">')
             dataRow.push(`<h4 class="card-title">${item.strDrink}</h4>`)

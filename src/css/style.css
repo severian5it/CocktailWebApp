@@ -1,3 +1,4 @@
+/*------------GENERAL------------*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
@@ -11,13 +12,23 @@ html {
   box-sizing: inherit;
 }
 
-body{
+.fixed-footer-body{
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: "Open Sans", Arial, sans-serif;
 }
+/*------------LANDING------------*/
+.background-landing {
+    background-attachment: fixed;
+    background-image: url('../images/background-25.jpg');
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh
+}
+
+/*------------SEARCH------------*/
 
 .search {
   width: 100%;
@@ -75,7 +86,7 @@ body{
     text-align: center
 }
 
-img {
+#results img {
   border: 1px solid #ddd; /* Gray border */
   border-radius: 4px;  /* Rounded border */
   padding: 5px; /* Some padding */
@@ -84,7 +95,7 @@ img {
 }
 
 /* Add a hover effect (blue shadow) */
-img:hover {
+#results img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
@@ -114,7 +125,7 @@ img:hover {
     text-align: center;
 }
 
-.card {
+#results .card {
     height: 280px
 }
 
@@ -122,5 +133,3 @@ img:hover {
   float: left;
   padding: 10px;
 }
-
-

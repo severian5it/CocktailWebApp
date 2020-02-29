@@ -74,14 +74,13 @@ html {
 
 .wrapafter{
   width: 30%;
-  left: 50%;
 
 }
 
 .hidden {
     display: none;
 }
-
+/*------------SEARCH&CATALOGUE------------*/
 .image{
     text-align: center
 }
@@ -100,6 +99,21 @@ html {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
+.card-title {
+    text-align: center;
+}
+
+#results .card {
+    height: 280px;
+    width: 20em
+}
+
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: .5rem;
+}
+
 /**
  * Footer Styles
  */
@@ -114,16 +128,4 @@ html {
 }
 
 
-.card-title {
-    text-align: center;
-}
 
-#results .card {
-    height: 280px;
-    width: 20em
-}
-
-.cocktail-results {
-  float: left;
-  padding: 10px;
-}

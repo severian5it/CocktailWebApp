@@ -28,6 +28,11 @@ html {
     height: 100vh
 }
 
+.background-landing .btn {
+  border-radius: 40px;
+  width: 13em;
+}
+
 /*------------SEARCH------------*/
 
 .search {

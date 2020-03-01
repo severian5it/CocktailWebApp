@@ -50,6 +50,12 @@ function searchSubmit() {
     document.getElementById("wrapper").classList.remove('wrap');
 }
 
+function randomCocktail() {
+    let urlRandom = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+    writeToModal(urlRandom);
+    $('#modalDetails').modal('show');
+}
+
 
 function writeToModal(url) {
     var tableRowsBody = [];

@@ -87,11 +87,10 @@ html {
     display: none;
 }
 /*------------CATALOGUE------------*/
-.alphabet{
-  margin: 0 auto;
-  float: none;
-}
 
+.btn-toolbar{
+  text-align: center;
+}
 /*------------SEARCH&CATALOGUE------------*/
 .image{
     text-align: center

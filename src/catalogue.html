@@ -4,11 +4,16 @@
     <title>Cocktail Web Search Engine</title>
     <link href="images/cocktail.ico" rel="icon">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/2634de6a5c.js"></script>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
-    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js" type="text/javascript"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
+          rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css"
+          rel="stylesheet">
+    <link crossorigin="anonymous"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
+            type="text/javascript"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("user_6QWtZ07QnotlGgzAFHDng");
@@ -23,7 +28,8 @@
     <!--*******NAVBAR*******-->
     <nav class="navbar navbar-expand-lg navbar-light peach-gradient">
         <a class="navbar-brand" href="index.html">CocktailsDB</a>
-        <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+        <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
                 data-target="#navbarNav" data-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,41 +42,74 @@
                     <a class="nav-link" href="search.html">Search</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-target="#modalContactForm" data-toggle="modal">Contact</a>
+                    <a class="nav-link" data-target="#modalContactForm"
+                       data-toggle="modal">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
     <!--*******pagination*******-->
-    <div class="container-fluid">
-        <div class="btn-toolbar mb-3  alphabet" role="toolbar">
-            <div class="btn-group btn-group-lg" role="group">
-                <button class="btn peach-gradient" onclick="letterPagination('a')">A</button>
-                <button class="btn peach-gradient" onclick="letterPagination('b')">B</button>
-                <button class="btn peach-gradient" onclick="letterPagination('c')">C</button>
-                <button class="btn peach-gradient" onclick="letterPagination('d')">D</button>
-                <button class="btn peach-gradient" onclick="letterPagination('e')">E</button>
-                <button class="btn peach-gradient" onclick="letterPagination('f')">F</button>
-                <button class="btn peach-gradient" onclick="letterPagination('g')">G</button>
-                <button class="btn peach-gradient" onclick="letterPagination('h')">H</button>
-                <button class="btn peach-gradient" onclick="letterPagination('i')">I</button>
-                <button class="btn peach-gradient" onclick="letterPagination('j')">J</button>
-                <button class="btn peach-gradient" onclick="letterPagination('k')">K</button>
-                <button class="btn peach-gradient" onclick="letterPagination('l')">L</button>
-                <button class="btn peach-gradient" onclick="letterPagination('m')">M</button>
-                <button class="btn peach-gradient" onclick="letterPagination('n')">N</button>
-                <button class="btn peach-gradient" onclick="letterPagination('o')">O</button>
-                <button class="btn peach-gradient" onclick="letterPagination('p')">P</button>
-                <button class="btn peach-gradient" onclick="letterPagination('q')">Q</button>
-                <button class="btn peach-gradient" onclick="letterPagination('r')">R</button>
-                <button class="btn peach-gradient" onclick="letterPagination('s')">S</button>
-                <button class="btn peach-gradient" onclick="letterPagination('t')">T</button>
-                <button class="btn peach-gradient disabled" onclick="letterPagination('u')">U</button>
-                <button class="btn peach-gradient" onclick="letterPagination('v')">V</button>
-                <button class="btn peach-gradient" onclick="letterPagination('w')">W</button>
-                <button class="btn peach-gradient  disabled" onclick="letterPagination('x')">X</button>
-                <button class="btn peach-gradient" onclick="letterPagination('y')">Y</button>
-                <button class="btn peach-gradient" onclick="letterPagination('z')">Z</button>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="btn-toolbar">
+                    <div class="btn-group btn-group-lg">
+                        <button class="btn peach-gradient" onclick="letterPagination('a')">A
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('b')">B
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('c')">C
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('d')">D
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('e')">E
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('f')">F
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('g')">G
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('h')">H
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('i')">I
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('j')">J
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('k')">K
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('l')">L
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('m')">M
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('n')">N
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('o')">O
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('p')">P
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('q')">Q
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('r')">R
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('s')">S
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('t')">T
+                        </button>
+                        <button class="btn peach-gradient disabled" onclick="letterPagination('u')">
+                            U
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('v')">V
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('w')">W
+                        </button>
+                        <button class="btn peach-gradient  disabled"
+                                onclick="letterPagination('x')">X
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('y')">Y
+                        </button>
+                        <button class="btn peach-gradient" onclick="letterPagination('z')">Z
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -86,7 +125,8 @@
     </section>
     <!--*******MODAL DETAILS*******-->
 
-    <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modalDetails" role="dialog"
+    <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade"
+         id="modalDetails" role="dialog"
          tabindex="-1">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -96,14 +136,16 @@
                     ...
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close
+                    </button>
                 </div>
             </div>
         </div>
     </div>
     <!--*******Contacts*******-->
 
-    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalContactForm" role="dialog"
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalContactForm"
+         role="dialog"
          tabindex="-1">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -117,13 +159,15 @@
                     <div class="md-form mb-5">
                         <i class="fas fa-user prefix grey-text"></i>
                         <input class="form-control validate" id="form34" type="text">
-                        <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                        <label data-error="wrong" data-success="right" for="form34">Your
+                            name</label>
                     </div>
 
                     <div class="md-form mb-5">
                         <i class="fas fa-envelope prefix grey-text"></i>
                         <input class="form-control validate" id="form29" type="email">
-                        <label data-error="wrong" data-success="right" for="form29">Your email</label>
+                        <label data-error="wrong" data-success="right" for="form29">Your
+                            email</label>
                     </div>
 
                     <div class="md-form mb-5">
@@ -134,8 +178,10 @@
 
                     <div class="md-form">
                         <i class="fas fa-pencil prefix grey-text"></i>
-                        <textarea class="md-textarea form-control" id="form8" rows="4" type="text"></textarea>
-                        <label data-error="wrong" data-success="right" for="form8">Your message</label>
+                        <textarea class="md-textarea form-control" id="form8" rows="4"
+                                  type="text"></textarea>
+                        <label data-error="wrong" data-success="right" for="form8">Your
+                            message</label>
                     </div>
 
                 </div>

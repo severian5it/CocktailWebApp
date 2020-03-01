@@ -100,8 +100,8 @@ html {
   border: 1px solid #ddd; /* Gray border */
   border-radius: 4px;  /* Rounded border */
   padding: 5px; /* Some padding */
-  width: 150px; /* Set a small width */
-  height: 200px;
+  width: 14em; /* Set a small width */
+  height: 16em;
 
 }
 
@@ -115,8 +115,9 @@ html {
 }
 
 #results .card {
-    height: 280px;
-    width: 20em
+    height: 20em;
+    width: 18em;
+    margin: 1em;
 }
 
 .card-deck {

@@ -3,7 +3,13 @@ function getData(url, cb) {
 
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            cb(JSON.parse(this.responseText));
+            if (this.response === "") {
+                         $('#modalMissing').modal('show');
+            }
+            else {
+                    cb(JSON.parse(this.responseText));
+
+            }
         }
     };
 
@@ -17,7 +23,6 @@ function writeToDocument(url) {
 
     getData(url, function (data) {
         data = data.drinks;
-
         data.forEach(function (item) {
             var dataRow = [];
 
@@ -132,6 +137,7 @@ function writeToModal(url) {
 
     var tableRowsHeader = [];
     var title = document.getElementById("modal-cocktail-header");
+
     getData(url, function (data) {
         data = data.drinks;
         data.forEach(function (item) {

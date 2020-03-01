@@ -184,14 +184,17 @@ the creater. The footer is moving according to the number of cocktail displayed.
 
 ![Color Palette](src/images/palette.png)
 
-Shades of Blue and Grey have been used to convey a professional and stable image.
+Peach has been used in Landing Page, along a combination of dark colour, while in features page, 
+gradient of peaches and white, along with a simple design has been used.
 
 ### Fonts
 
-From Google Fonts has been used *Tangerine* font; for the rest of the Headings *Nobile* standard font has been used.
+From Google Fonts has been used *Open Sans* font; for the rest of the Headings *Arial* standard font
+ has been used.
 
 ## Features for future releases
-- A Section showing favourable user comments.
+- allowing visitors to search directly from landing pages, but for this some back end technologies
+would be needed.
 
 # Technologies Used
 
@@ -206,10 +209,12 @@ Beside the holy trinity of Web Development, HTML, CSS and JavaScript, I took adv
     - The project relies heavily on **Bootstrap** component and predefined styles.
 - [FontAwesome](https://fontawesome.com/)
     - **FontAwesome** is the source of the icons.
-- [Popper.js](https://popper.js.org/)
-    - **Popper** is used for the scrolling between different sections.
+- [Material Design for Bootstrap](https://mdbootstrap.com//)
+    - has been used for some component, such as the contact modal and the button group.
 - [Google Fonts](https://fonts.google.com/) 
     - to style the website fonts
+- [Email.js](https://emailjs.com/) 
+    - to allow the contact form to send mail
     
 ## Tools
 
@@ -238,36 +243,35 @@ via the *inspect* chrome functionality it has been examined for the most popular
 
 also following section has been tested:
 
-1. Iframe Map: zooming in and out of the map.
+1. Navbar: navigating through different pages and calling random feature.
 
-1. Carousel: sliding through the rooms' pictures composing the carousel, testing indicators at the bottom
-of the slides.
+1. Search: calling different ingredients, and testing different results.
 
 1. Contact form via the following routine:
     1. Going to the "Contact" Section
     2. Trying to submit the empty form and verify that an error message about the required fields appears
     3. Trying to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Trying to submit the form with all inputs valid and verify that the modal will appear.
+    4. Trying to submit the form with all inputs valid and verify that the mail is sent correctly.
 
-1. Gallery to showcase the closest point of interest.
+1. Catalogue, browsing all the alphabet letters.
 
-Bugs: most relevant bugs to tackle involved *bootstrap4 carousel* which arrows indicators
-pushed navigation to the top of the section, but changing the `data-target` field solved it.
-Other issues involved the JavaScript-powered scrolling which at some point was not adapting 
-to new component added, and this meant refactoring from the original version.
+1. Random Features, calling each time a different cocktail.
 
-Navigation with key was not enabled by default on galley modals, so I had to write a jQuery function 
-on my own.
+1. Landing Page, accessing all the page of the site.
 
-A Bug I wasn't able to reproduce was the scrollbar at the bottom that was appearing on the laptop of my mentor; despite 
-my effort it never showed up during my testing to me or to other testers.
+Bugs: most relevant bugs to tackle involved *bootstrap4 card* and they were shown after being 
+returned by API query; in the first stage of the development they were managed by long JavaScript 
+code, in the latest stage card-deck class by bootstrap was solving most of the issue.
+
+Other problems were given by how to access all the informations provided by the JSON APIs, but this 
+required more patience than anything lese
 
 # Deployment
 
 Site has been developed on PyCharm and pushed to GitHub via terminal commands.
 code can be fetched locally with following command
 ```shell
-git clone https://github.com/severian5it/Milestone1.git
+git clone https://github.com/severian5it/CocktailWebApp.git
 ```
 ## how to run this project locally
 is possible to run it locally running a python server on the same location on index.html and then visiting 
@@ -280,7 +284,7 @@ Code was deployed to heroku which features a full integration with git with the 
 First use heroku create CLI command, which  instantiates a new empty application on Heroku, 
 along with an associated empty Git repository.
 ```shell
-heroku apps:create milestone1-pierluca
+heroku apps:create CocktailWebApp
 ```
 then, every time the local development was satisfying, the local branch can be pushed in production
 with following instruction:
@@ -293,6 +297,8 @@ no variable must be set, all the dependency are managed by the file `index.php`,
 <?php header( 'Location: /index.html' ) ;  ?>
 ```
 
+as matter of fact, push to *Heroku* was automated so each push to the master was a push to Heroku 
+itself. 
 
 # Credits
 
@@ -300,21 +306,14 @@ no variable must be set, all the dependency are managed by the file `index.php`,
 - The structure of the project was modeled on the examples provided by the **Code Institute**, in particular on 
 [Haley Schafer Portfolio](https://github.com/Code-Institute-Solutions/StudentExampleProjectGradeFive)
 
-Really useful resources during development were [W3school](https://www.w3schools.com/) and [Stack Overflow](https://stackoverflow.com/).
+Really useful resources during development were [W3school](https://www.w3schools.com/) and [Stack Overflow](https://stackoverflow.com/)
+and [Rapid API](https://rapidapi.com/), which provided a lot of example to place my work on.
 
 
 ## Media
-- The photos used in the Landing section was downloaded from [Unsplash](https://unsplash.com/), and credit goes to 
-to *Xavier Coiffic*.
-- The photos used in the Contact section was downloaded from [Unsplash](https://unsplash.com/), and credit goes to 
-*Cristina Gottardi*.
-- The photos used for *Vatican museum* in the Attractions section was downloaded from [Unsplash](https://unsplash.com/), 
-and credit goes to *Cezar Sampaio*.
-- The photos used for *Vatican* in the Attractions section was downloaded from [Unsplash](https://unsplash.com/), 
-and credit goes to *Nils Huber*.
-
-- The photos used for *Angel Castle* in the Attractions section was downloaded from [Unsplash](https://unsplash.com/), 
-and credit goes to *Michele Bitetto*.
+- The photo used in the Landing section was downloaded from [Unsplash](https://unsplash.com/), and credit goes to 
+to [*Ash Edmonds*](https://unsplash.com/@badashproducts).
+- While the structure of the Site is mine, all the back end api are provided by [CocktailDB](https://cocktaildb.com/)
 ## Acknowledgements
 
 - I received inspiration and guidance for this project from my mentor, *Aaron Sinnot*.

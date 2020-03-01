@@ -19,16 +19,16 @@
     - [Ideal Client](#The-ideal-client-for-this-business-is)
     - [Visitors' Searches](#Visitors-to-this-website-are-searching-for)
     - [Project's Purpose](#This-project-is-the-best-way-to-help-them-achieve-these-things-because)
-    - [Client Stories](#client-stories)
+    - [Visitor Stories](#visitor-stories)
     - [Wireframes](#wireframes)
 
 2. [Features](#features)
     - [Existing Features](#existing-features)
         - [Navbar](#Navbar)
         - [Landing](#Landing-Page)
-        - [Location](#Location)
-        - [Carousel](#Room-Carousel)
-        - [Attractions](#Attractions)
+        - [Search](#Search)
+        - [Catalogue](#Catalogue)
+        - [Random](#Random)
         - [Contact](#Contact-Form)
         - [Footer](#Footer)
         - [Alternate Language](#Alternate-Language-Version)
@@ -78,50 +78,54 @@ of the season; then the site is targeting in particular:
 * Tourist that would like to enrich their experience with guided tours.
 
 ### Visitors to this website are searching for:
-* Location of the residence.
-* List of tourist attractions in proximity.
-* Contact.
-* Pictures of the rooms.
-* Links to related Social Networks.
+* Cocktail recipe for a specific cocktail.
+* Random Suggestion to prepare a cocktail.
+* Contact the webmaster for suggestions.
+* Pictures of the Cocktail.
+* Browser all the cocktail.
 
 
 ### This project is the best way to help them achieve these things because:
 
-People looking for an accommodation in their selected destination need to make an informed decision and they are usually
-relying on a website with full visual and geo-localized content. 
+Barman or Amateur looking for a cocktail need to make an informed decision and they want to explore
+all the potential opportunities, not only in visual terms, but also having an ordered list of the 
+ingredients. 
 The site is presenting them, in a concise and easy-to-use way, everything they need to know.
 
-The goal was to make a strong first impact with the landing page, and therefore serve the most relevant information.
+The goal was to make a strong first impact with the landing page, and therefore move the exploration
+and the research on other pages.
 
-* Picture landing page, for striking ﬁrst impression.
-* A Carousel with photos showing the look and feel of the Rooms.
-* A Section showing the location and address
-* A Section showing pictures of closest interest point.
-* A Section with a contact form for enquiries and bookings.
-* A navigation bar and a footer
+* Picture landing page, for a striking ﬁrst impression and link to functionalities.
+* Catalogue with alphabetic navigation, each letter invoking an *API*.
+* A Search by ingredients, page each request calling an *API*.
+* A random functionality, calling an *API* and displaying a modal.
+* A Modal invoking an *API* callable clicking on a Cocktail card.
+* A Contact modal, sending mail to the webmaster.
 
-### Client stories
+### Visitor stories
 
-As a visitor of the *Residence Giulio Cesare* website I expect the following:
+As a visitor of the *Cocktail DB* website I expect the following:
 
-1. To find with ease what I am looking for, I want the layout of the site to make sense so I am not confused 
-or frustrated using it. 
+1. To find with ease what I am looking for, I want the layout of the site to make sense so I am not 
+confused or frustrated using it. 
 
-1. The information I am presented with to be laid out in a way that is easy for me to digest, so that I find my way 
-through in the quickest possible way.
+1. The information I am presented with to be laid out in a way that is easy for me to digest, so 
+that I find my way  through in the quickest possible way.
 
-1. The site to be easily navigable from any device, desktop, tablet or phone. For the content to look good and 
-be usable on any of these devices.
+1. The site to be easily navigable from any device, desktop, tablet or phone. For the content to 
+look good and be usable on any of these devices.
 
-1. To learn more about the residence and their offering, so that I can make the best possible choice.
+1. To learn more about the cocktails I see and their recipe, so that I can prepare them when I want.
 
-1. To easily locate it in the city of Rome.
+1. To find all the cocktails I can with ingredients available.
 
-1. To know which tourist attractions are close to it.
+1. To know how to prepare a cocktail.
 
-1. Plenty of high quality images of the Rooms where I can spend my vacation.
+1. Plenty of high quality images of the Cocktails I can prepare.
 
-1. To be able to get in contact to the management in a quick and easy way.
+1. To be able to get in contact with WebMaster in a quick and easy way.
+
+1. To have random suggestions when undecided.
 
 
 ### Wireframes
@@ -139,47 +143,42 @@ All the different part of the project are detailed below.
 ## Existing Features
 
 ### Navbar
-A responsive navigation bar with national flag on the top left. For mobile-sized devices a hamburger button on 
-the top-right expands a menu with links to the different section on the website. On larger devices the expanded menu 
-is shown instead. Navigation bar will be static on the top of the page.
+A responsive navigation bar with link to the landing page on top left. For mobile-sized devices a 
+hamburger button on  the top-right expands a menu with links to the different section on the website. 
+On larger devices the expanded menu is shown instead. Navigation bar will be static on the top of 
+the page, and will have a peach gradient color.
 ### Landing Page
-Landing Page presents a picture taken in the proximity of the residence, along with a presentation heading, that 
-makes us of transformations to ease-in. The picture is different on different devices, and it's scaled by media queries.
-### Location
-A dedicated section for location has been designed, containing an *iframe* from google maps 
-and a card with the address.
-### Attractions
-A dedicated section for close attractions has been designed, containing 4 responsive *cards*. Clicking on each of them,
-a Modal gallery is openened, with possibilites to know more about each point of interest.
-### Room Carousel
-A carousel sliding through three images of the residence has been framed in a dedicate section. Naviagation is possible
-via indicators or via control.
-On the bottom of the page an icon to *Instagram* allows to see more.
+Landing Page presents a picture of a cocktail, along with a presentation heading, that introduces a 
+visitor to the main features of the site: the search and the explore
+### Search
+A dedicated page for search has been designed, mimic google functionality, with a single search box, 
+that gets moved when the search by ingredients is executed. A series of Card appears as a results.
+Each of them is clickable and call an *API* which populates a modal with cocktails instruction and 
+ingredients. 
+### Catalogue
+A dedicated section to Browse Catalogue has been designed, with a toolbar for each alphabet letter. 
+Clicking on each alphabet letter, the section below gets populated with a series of Card.
+Each of them is clickable and call an *API* which populates 
+### Random
+This functionality is available only by the menu, and a Random cocktail is displayed by a modal, after
+an *API* call.
 ### Contact Form
 
 This page includes a form with 4 required fields:
 * Name
-* Phone Number
+* Title
 * Email Address
 * Message
 
-Controls have been implemented to avoid leaving the fields empty or to submit invalid mail addresses.
-Once the form has been validated, a *modal* window will appear, informing the user that the data won't be 
-actually submitted.
-The picture in background is different on different devices, and it's scaled by media queries.
+JS controls have been implemented to avoid leaving the fields empty or to submit invalid mail addresses.
+Once the form has been validated, a *mail* will be sent to my personal mail address and the modal 
+will be closed. In case of not validated fields, the user will see them with a wrong label displayed.
 
 ### Footer
 
-On the very bottom of the page a footer has placed, with link to the following Residence Resource:
-* TripAdvisor
-* Booking
-* AirBnb
+On the very bottom of the page a footer has placed, with a really simple design and warning about
+the creater. The footer is moving according to the number of cocktail displayed.
 
-
-
-### Alternate Language Version
-
-Via a `Italy/UK` flag button in the navigation bar is possible to switch between Italian or English Version of the site.
 
 ### Colors Palette
 

@@ -70,7 +70,7 @@ html {
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 30%;
+  width: 40%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -78,7 +78,7 @@ html {
 }
 
 .wrapafter{
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
   float: none;
 }
@@ -139,6 +139,7 @@ html {
 
 .footer {
   position: absolute;
+  height: 4%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -146,5 +147,8 @@ html {
   text-align: center;
 }
 
+.navbar {
+  height: 8%;
+}
 
 

@@ -12,7 +12,7 @@
 
 
 
-![Home page](src/images/background-25.jpg)
+![Home page](src/images/mockup.png)
 
 ## Table of Contents
 1. [UX](#ux)
@@ -56,17 +56,17 @@
 
 8. [Contact](#contact)
 
-My project is about a fictional Residence in Rome, in proximity with the Vatican. 
-User navigating to the site will be exposed to the following information:
-* Residence Location.
-* A list of attractions located nearby, with brief description.
-* A view of the rooms, with Link to Instagram Account
-* A form to get in contact with the residence to book their accomodation
+My project is leveraging *free Json API* from [CocktailDB](https://thecocktaildb.com/), Creating a 
+front end interface that allow a the website visitor to do the following:
+* Browse all the cocktails in the DB, paginated by letter.
+* Get a random cocktail.
+* Find out all the cocktails feasible with a specific ingredient.
+* Suggest to the webmaster any cocktail in particular to include.
  
 # UX
 
-This is a website of a Residence/ B&B located in the hearth of Rome, providing services to the turist, such as
-accomodation, for short and long stay, passage from city's airport and guided tours.
+This is a website allowing different kind of selection operations over the Cocktail DB, the purpose
+of the project is to allow visitors to extract information quickly and in different way.
 
 ### The ideal client for this business is:
 First and foremost, potential tourists or visitors, for every period of the year. Rome is a good destination regardless

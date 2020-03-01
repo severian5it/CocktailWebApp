@@ -1,6 +1,20 @@
 /*------------GENERAL------------*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -90,6 +104,10 @@ html {
 
 .btn-toolbar{
   text-align: center;
+}
+
+.btn-group .btn {
+    font-size: 12px;
 }
 /*------------SEARCH&CATALOGUE------------*/
 .image{

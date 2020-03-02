@@ -316,7 +316,8 @@ to [*Ash Edmonds*](https://unsplash.com/@badashproducts).
 - While the structure of the Site is mine, all the back end api are provided by [CocktailDB](https://cocktaildb.com/)
 ## Acknowledgements
 
-- I received inspiration and guidance for this project from my mentor, *Aaron Sinnot*.
+- I received inspiration and guidance for this project from my mentor, *Aaron Sinnot*, and from 
+*Simen Daehlin*.
 
 # Contact
 To contact me feel free to email

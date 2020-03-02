@@ -25,7 +25,7 @@ function writeToDocument(url) {
         data = data.drinks;
         data.forEach(function (item) {
             var dataRow = [];
-
+dataRow.push('<div class="col-sm-6 col-md-4 col-lg-2 ">')
             dataRow.push('<div class="card">')
             dataRow.push('<div class="image">')
             dataRow.push(`<img src=${item.strDrinkThumb} onclick="openGalleryModal(${item.idDrink})">`)
@@ -34,6 +34,7 @@ function writeToDocument(url) {
             dataRow.push(`<h4 class="card-title">${item.strDrink}</h4>`)
             dataRow.push('</div>')
             dataRow.push('</div>')
+                        dataRow.push('</div>')
             tableRows.push(`${dataRow}`);
         });
 

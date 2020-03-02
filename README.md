@@ -6,7 +6,7 @@
 </div>
 
 <div align="center">
-    <a href="https://severian5it.github.io/CocktailWebApp/"> View Website in GitHub Pages </a>
+    <a href="https://severian5it.github.io/CocktailWebApp/~~~~"> View Website in GitHub Pages </a>
 </div>
 
 

@@ -1,5 +1,5 @@
 function getData(url, cb) {
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -18,13 +18,13 @@ function getData(url, cb) {
 }
 
 function writeToDocument(url) {
-    var tableRows = [];
-    var el = document.getElementById("data");
+    let tableRows = [];
+    let el = document.getElementById("data");
 
     getData(url, function (data) {
         data = data.drinks;
         data.forEach(function (item) {
-            var dataRow = [];
+            let dataRow = [];
 dataRow.push('<div class="col-sm-6 col-md-4 col-lg-2 ">')
             dataRow.push('<div class="card">')
             dataRow.push('<div class="image">')
@@ -59,14 +59,14 @@ function randomCocktail() {
 
 
 function writeToModal(url) {
-    var tableRowsBody = [];
-    var el = document.getElementById("modal-cocktail");
+    let tableRowsBody = [];
+    let el = document.getElementById("modal-cocktail");
 
     getData(url, function (data) {
         data = data.drinks;
 
         data.forEach(function (item) {
-            var dataRow = [];
+            let dataRow = [];
             dataRow.push(`<p><bold>Glass: </bold>${item.strGlass}</p>`)
             dataRow.push(`<p><bold>Category: </bold>${item.strCategory}</p>`)
             dataRow.push(`<p><bold>Instructions: </bold>${item.strInstructions}</p>`)
@@ -142,8 +142,8 @@ function writeToModal(url) {
 
     });
 
-    var tableRowsHeader = [];
-    var title = document.getElementById("modal-cocktail-header");
+    let tableRowsHeader = [];
+    let title = document.getElementById("modal-cocktail-header");
 
     getData(url, function (data) {
         data = data.drinks;

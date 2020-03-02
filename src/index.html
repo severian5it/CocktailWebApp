@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Cocktail Web Search Engine</title>
-    <link href="images/cocktail.ico" rel="icon">
+    <link href="assets/images/cocktail.ico" rel="icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -26,30 +26,40 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/js/mdb.min.js"></script>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
-
 <!--*******Jumbotron*******-->
-<div class="card card-image background-landing">
-    <div class="text-white text-center rgba-stylish-strong py-5 px-4">
-        <div class="py-5">
+<div class="container-fluid background-landing">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card card-image">
+                <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+                    <div class="py-5">
+                        <!-- Content -->
+                        <h5 class="h5 orange-text"><i class="fas fa-cocktail"></i> Cocktail</h5>
+                        <h2 class="card-title h2 my-4 py-2">Welcome to Cocktail Database</h2>
+                        <p class="mb-4 pb-2 px-md-5 mx-md-5">Do you have an ingredient? See what you
+                            can mix
+                            up!</p>
+                        <a href="search.html" class="btn peach-gradient "><i
+                                class="fas fa-search left"></i>
+                            Search</a>
+                        <br>
+                        <p class="mb-4 pb-2 px-md-5 mx-md-5">Or browse the wide selection in the
+                            database!</p>
+                        <a href="catalogue.html" class="btn peach-gradient "><i
+                                class="fas fa-clone left"></i>
+                            Catalogue</a>
+                    </div>
+                </div>
+            </div>
 
-            <!-- Content -->
-            <h5 class="h5 orange-text"><i class="fas fa-cocktail"></i> Cocktail</h5>
-            <h2 class="card-title h2 my-4 py-2">Welcome to Cocktail Database</h2>
-            <p class="mb-4 pb-2 px-md-5 mx-md-5">Do you have an ingredient? See what you can mix
-                up!</p>
-            <a href="search.html" class="btn peach-gradient "><i class="fas fa-search left"></i>
-                Search</a>
-            <br>
-            <p class="mb-4 pb-2 px-md-5 mx-md-5">Or browse the wide selection in the database!</p>
-            <a href="catalogue.html" class="btn peach-gradient "><i class="fas fa-clone left"></i>
-                Catalogue</a>
         </div>
     </div>
+
 </div>
 </body>
 </html>

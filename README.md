@@ -12,7 +12,7 @@
 
 
 
-![Home page](src/images/mockup.png)
+![Home page](src/assets/images/mockup.png)
 
 ## Table of Contents
 1. [UX](#ux)
@@ -182,7 +182,7 @@ the creater. The footer is moving according to the number of cocktail displayed.
 
 ### Colors Palette
 
-![Color Palette](src/images/palette.png)
+![Color Palette](src/assets/images/palette.png)
 
 Peach has been used in Landing Page, along a combination of dark colour, while in features page, 
 gradient of peaches and white, along with a simple design has been used.

@@ -1,31 +1,18 @@
-function getData(url, cb) {
-    let xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            if (this.response === "") {
-                         $('#modalMissing').modal('show');
-            }
-            else {
-                    cb(JSON.parse(this.responseText));
-
-            }
-        }
-    };
-
-    xhr.open("GET", url);
-    xhr.send();
+async function callApi(url) {
+    let response = await fetch(url);
+    return await response.json();
 }
 
 function writeToDocument(url) {
     let tableRows = [];
     let el = document.getElementById("data");
 
-    getData(url, function (data) {
-        data = data.drinks;
+    callApi(url).then(function (response) {
+        console.log(response);
+        data = response.drinks;
         data.forEach(function (item) {
             let dataRow = [];
-dataRow.push('<div class="col-sm-6 col-md-4 col-lg-2 ">')
+            dataRow.push('<div class="col-sm-6 col-md-4 col-lg-2 ">')
             dataRow.push('<div class="card">')
             dataRow.push('<div class="image">')
             dataRow.push(`<img src=${item.strDrinkThumb} onclick="openGalleryModal(${item.idDrink})">`)
@@ -34,13 +21,16 @@ dataRow.push('<div class="col-sm-6 col-md-4 col-lg-2 ">')
             dataRow.push(`<h4 class="card-title">${item.strDrink}</h4>`)
             dataRow.push('</div>')
             dataRow.push('</div>')
-                        dataRow.push('</div>')
+            dataRow.push('</div>')
             tableRows.push(`${dataRow}`);
         });
 
         el.innerHTML = `${tableRows}`.replace(/,/g, "");
 
+    }).catch(function (err) {
+        $('#modalMissing').modal('show');
     });
+    ;
 }
 
 function searchSubmit() {
@@ -62,8 +52,8 @@ function writeToModal(url) {
     let tableRowsBody = [];
     let el = document.getElementById("modal-cocktail");
 
-    getData(url, function (data) {
-        data = data.drinks;
+    callApi(url).then(function (response) {
+        data = response.drinks;
 
         data.forEach(function (item) {
             let dataRow = [];
@@ -145,8 +135,8 @@ function writeToModal(url) {
     let tableRowsHeader = [];
     let title = document.getElementById("modal-cocktail-header");
 
-    getData(url, function (data) {
-        data = data.drinks;
+    callApi(url).then(function (response) {
+        data = response.drinks;
         data.forEach(function (item) {
             var dataRow = [];
             dataRow.push(`<h3 class="modal-title">${item.strDrink}</h3>`)
@@ -162,7 +152,6 @@ function writeToModal(url) {
 
 }
 
-
 function openGalleryModal(id) {
     /**
      * Open Gallery Modal
@@ -171,15 +160,6 @@ function openGalleryModal(id) {
     console.log(url + id)
     writeToModal(url + id)
     $('#modalDetails').modal('show');
-
-}
-
-//  needed?
-function closeGalleryModal() {
-    /**
-     * close Gallery  Modal
-     */
-    $('#modal').modal('hide');
 
 }
 

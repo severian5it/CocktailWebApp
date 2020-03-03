@@ -1,8 +1,16 @@
+/**
+ * Asynchronous function returning a promise
+ * @param {string}   url          url to Call.
+ */
 async function callApi(url) {
     let response = await fetch(url);
     return await response.json();
 }
 
+/**
+ * Call Api with the url and output the result to a card
+ * @param {string}   url          url to Call.
+ */
 function writeToDocument(url) {
     let tableRows = [];
     let el = document.getElementById("data");
@@ -30,9 +38,11 @@ function writeToDocument(url) {
     }).catch(function (err) {
         $('#modalMissing').modal('show');
     });
-    ;
 }
 
+/**
+ * Call Api with the value of Input field
+ */
 function searchSubmit() {
     let url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
     var inputVal = document.getElementById("toSearch").value;
@@ -41,13 +51,19 @@ function searchSubmit() {
     document.getElementById("wrapper").classList.remove('wrap');
 }
 
+/**
+ * Call Api, return a random cocktail and show the modal
+ */
 function randomCocktail() {
     let urlRandom = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
     writeToModal(urlRandom);
     $('#modalDetails').modal('show');
 }
 
-
+/**
+ * Call Api with url and write the results into  modal cocktail
+ * @param {string}   url          url to Call.
+ */
 function writeToModal(url) {
     let tableRowsBody = [];
     let el = document.getElementById("modal-cocktail");
@@ -93,7 +109,7 @@ function writeToModal(url) {
 
             ingredientToLoop.forEach(pushIngredient);
 
-            function pushIngredient(item, index) {
+            function pushIngredient(item) {
                 if (item.ingredient !== null) {
                 if (item.measure !== null) {
                     dataRow.push(`<li>${item.measure} of ${item.ingredient}</li>`)
@@ -130,10 +146,12 @@ function writeToModal(url) {
 
 }
 
+/**
+ * Open Gallery Modal
+ * @param {number}   id           Cocktail Id.
+ */
 function openGalleryModal(id) {
-    /**
-     * Open Gallery Modal
-     */
+
     let url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
     console.log(url + id)
     writeToModal(url + id)
@@ -141,6 +159,10 @@ function openGalleryModal(id) {
 
 }
 
+/**
+ * Call Api with letter
+ * @param {string}   letter          Letter to Call.
+ */
 function letterPagination(letter) {
     let url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=';
     writeToDocument(url + letter)

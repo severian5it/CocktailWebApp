@@ -1,4 +1,6 @@
-
+/**
+ * function to send mail if all fields are valid
+ */
 function sendMail() {
     let name = document.getElementById("form34");
     let mail = document.getElementById("form29");

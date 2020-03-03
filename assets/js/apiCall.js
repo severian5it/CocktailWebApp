@@ -61,68 +61,46 @@ function writeToModal(url) {
             dataRow.push(`<p><bold>Category: </bold>${item.strCategory}</p>`)
             dataRow.push(`<p><bold>Instructions: </bold>${item.strInstructions}</p>`)
             dataRow.push(`<p><bold>Ingredients: </bold> <ul style="list-style-type:disc;"></p>`)
-            if (item.strIngredient1 !== null) {
-                if (item.strMeasure1 !== null) {
-                    dataRow.push(`<li>${item.strMeasure1} of ${item.strIngredient1}</li>`)
+
+            const ingredientToLoop = [{
+                "ingredient": item.strIngredient1,
+                "measure": item.strMeasure1
+            }, {
+                "ingredient": item.strIngredient2,
+                "measure": item.strMeasure2
+            }, {
+                "ingredient": item.strIngredient3,
+                "measure": item.strMeasure3
+            },{
+                "ingredient": item.strIngredient4,
+                "measure": item.strMeasure4
+            }, {
+                "ingredient": item.strIngredient5,
+                "measure": item.strMeasure5
+            }, {
+                "ingredient": item.strIngredient6,
+                "measure": item.strMeasure6
+            },{
+                "ingredient": item.strIngredient7,
+                "measure": item.strMeasure7
+            }, {
+                "ingredient": item.strIngredient8,
+                "measure": item.strMeasure8
+            }, {
+                "ingredient": item.strIngredient9,
+                "measure": item.strMeasure9
+            }];
+
+            ingredientToLoop.forEach(pushIngredient);
+
+            function pushIngredient(item, index) {
+                if (item.ingredient !== null) {
+                if (item.measure !== null) {
+                    dataRow.push(`<li>${item.measure} of ${item.ingredient}</li>`)
                 } else {
-                    dataRow.push(`<li>${item.strIngredient1}</li>`)
+                    dataRow.push(`<li>${item.ingredient}</li>`)
                 }
             }
-            if (item.strIngredient2 !== null) {
-                if (item.strMeasure2 !== null) {
-                    dataRow.push(`<li>${item.strMeasure2} of ${item.strIngredient2}</li>`)
-                } else {
-                    dataRow.push(`<li>${item.strIngredient2}</li>`)
-                }
-            }
-            if (item.strIngredient3 !== null) {
-                if (item.strMeasure3 !== null) {
-                    dataRow.push(`<li>${item.strMeasure3} of ${item.strIngredient3}</li>`)
-                } else {
-                    dataRow.push(`<li>${item.strIngredient3}</li>`)
-                }
-            }
-            if (item.strIngredient4 !== null) {
-                if (item.strMeasure4 !== null) {
-                    dataRow.push(`<li>${item.strMeasure4} of ${item.strIngredient4}</li>`)
-                } else {
-                    dataRow.push(`<li>${item.strIngredient4}</li>`)
-                }
-            }
-            if (item.strIngredient5 !== null) {
-                if (item.strMeasure5 !== null) {
-                    dataRow.push(`<li>${item.strMeasure5} of ${item.strIngredient5}</li>`)
-                } else {
-                    dataRow.push(`<li>${item.strIngredient5}</li>`)
-                }
-            }
-            if (item.strIngredient6 !== null) {
-                if (item.strMeasure6 !== null) {
-                    dataRow.push(`<li>${item.strMeasure6} of ${item.strIngredient6}</li>`)
-                } else {
-                    dataRow.push(`<li>${item.strIngredient6}</li>`)
-                }
-            }
-            if (item.strIngredient7 !== null) {
-                if (item.strMeasure7 !== null) {
-                    dataRow.push(`<li>${item.strMeasure7} of ${item.strIngredient7}</li>`)
-                } else {
-                    dataRow.push(`<li>${item.strIngredient7}</li>`)
-                }
-            }
-            if (item.strIngredient8 !== null) {
-                if (item.strMeasure8 !== null) {
-                    dataRow.push(`<li>${item.strMeasure8} of ${item.strIngredient8}</li>`)
-                } else {
-                    dataRow.push(`<li>${item.strIngredient8}</li>`)
-                }
-            }
-            if (item.strIngredient9 !== null) {
-                if (item.strMeasure9 !== null) {
-                    dataRow.push(`<li>${item.strMeasure9} of ${item.strIngredient9}</li>`)
-                } else {
-                    dataRow.push(`<li>${item.strIngredient9}</li>`)
-                }
             }
             dataRow.push(`</ul>`)
             tableRowsBody.push(`${dataRow}`);

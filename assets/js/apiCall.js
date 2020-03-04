@@ -21,7 +21,7 @@ function writeToDocument(url) {
         data.forEach(function (item) {
             let dataRow = [];
             dataRow.push('<div class="col-sm-6 col-md-4 col-lg-2 ">')
-            dataRow.push('<div class="card">')
+            dataRow.push('<div class="card shadow-lg p-3 mb-5 bg-white rounded">')
             dataRow.push('<div class="image">')
             dataRow.push(`<img src=${item.strDrinkThumb} onclick="openGalleryModal(${item.idDrink})">`)
             dataRow.push('</div>')

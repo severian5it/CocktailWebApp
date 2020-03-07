@@ -181,9 +181,7 @@ h2 {
   font-weight: bold;
 }
 
-/**
- * Footer Styles
- */
+/*------------FOOTER------------*/
 
 .footer {
   position: absolute;
@@ -195,4 +193,9 @@ h2 {
   text-align: center;
 }
 
+/*------------DIALOG------------*/
+
+.modal-dialog {
+    max-width: 50vw;
+}
 

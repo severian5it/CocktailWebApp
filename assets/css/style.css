@@ -107,7 +107,7 @@ html {
 }
 
 .btn-group .btn {
-    font-size: 12px;
+    font-size: 1.1em;
 }
 /*------------SEARCH&CATALOGUE------------*/
 .image{
@@ -163,6 +163,5 @@ html {
   padding: 1rem;
   text-align: center;
 }
-
 
 

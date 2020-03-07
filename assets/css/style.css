@@ -94,10 +94,11 @@ h2 {
   border: 0.5em solid;
   border-right: none;
   padding: 1em;
-  height: 6vh;
+  height: 2em;
   border-radius: 0.8em 0 0 0.8em;
   outline: none;
   color: #9DBFAF;
+  font-size: 1.8em;
 }
 
 .searchTerm:focus{
@@ -106,7 +107,7 @@ h2 {
 
 .searchButton {
   width: 6vw;
-  height: 6vh;
+  height: 3.9em;
   border: 0.2em solid #00B4CC;
   background: #00B4CC;
   text-align: center;

@@ -149,9 +149,9 @@ h2 {
 }
 
 #results img {
-  border: 1px solid #ddd; /* Gray border */
-  border-radius: 4px;  /* Rounded border */
-  padding: 5px; /* Some padding */
+  border: 0.1em solid #ddd; /* Gray border */
+  border-radius: 0.2em;  /* Rounded border */
+  padding: 0.3em; /* Some padding */
   width: 14em; /* Set a small width */
   height: 16em;
 
@@ -159,7 +159,7 @@ h2 {
 
 /* Add a hover effect (blue shadow) */
 #results img:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  box-shadow: 0 0 0.1em 0.1em rgba(0, 140, 186, 0.5);
 }
 
 .card-title {
@@ -176,7 +176,7 @@ h2 {
 .close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 2em;
   font-weight: bold;
 }
 

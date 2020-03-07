@@ -94,7 +94,7 @@ h2 {
   border: 0.5em solid;
   border-right: none;
   padding: 1em;
-  height: 10vh;
+  height: 6vh;
   border-radius: 0.8em 0 0 0.8em;
   outline: none;
   color: #9DBFAF;
@@ -105,15 +105,15 @@ h2 {
 }
 
 .searchButton {
-  width: 40vw;
-  height: 10vh;
+  width: 6vw;
+  height: 6vh;
   border: 0.2em solid #00B4CC;
   background: #00B4CC;
   text-align: center;
   color: #fff;
   border-radius: 0 0.3em 0.3em 0;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.4em;
 }
 
 /*Resize the wrap to see the search bar change!*/

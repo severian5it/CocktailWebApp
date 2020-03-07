@@ -48,10 +48,19 @@ html {
     overflow-x: hidden;
 }
 
+
+h1 {
+    font-size: 5.5em;
+}
+
+h2 {
+    letter-spacing: 0.2em;
+}
+
 /*------------LANDING------------*/
 .background-landing {
     background-attachment: fixed;
-    background-image: url('../images/background-25.jpg');
+    background-image: url('../images/background-25.jpeg');
     background-position: bottom;
     background-size: cover;
     height: 100vh
@@ -59,7 +68,17 @@ html {
 
 .background-landing .btn {
   border-radius: 12em;
-  width: 13em;
+  height: 4em;
+  width: 16em;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  #about-residence {
+    /* smaller landing page for mobile device */
+    background-image: url(../images/background-25-small-device.png);
+  }
 }
 
 /*------------SEARCH------------*/
@@ -75,7 +94,7 @@ html {
   border: 0.5em solid;
   border-right: none;
   padding: 1em;
-  height: 3.6em;
+  height: 10vh;
   border-radius: 0.8em 0 0 0.8em;
   outline: none;
   color: #9DBFAF;
@@ -86,8 +105,8 @@ html {
 }
 
 .searchButton {
-  width: 2.4em;
-  height: 2.7em;
+  width: 40vw;
+  height: 10vh;
   border: 0.2em solid #00B4CC;
   background: #00B4CC;
   text-align: center;
@@ -99,7 +118,7 @@ html {
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 40%;
+  width: 40vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -107,7 +126,7 @@ html {
 }
 
 .wrapafter{
-  width: 40%;
+  width: 40vw;
   margin: 0 auto;
   float: none;
 }

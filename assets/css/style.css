@@ -38,13 +38,13 @@ html {
 .navbar {
     background: none;
     border-color: transparent;
-    letter-spacing: 7px;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
 }
 
 .navbar .navbar-collapse {
     text-align: right;
-    border-top: 1px solid transparent;
+    border-top: 0.1em solid transparent;
     overflow-x: hidden;
 }
 
@@ -189,6 +189,7 @@ h2 {
   right: 0;
   bottom: 0;
   left: 0;
+    height: 5vh;
   padding: 1rem;
   text-align: center;
 }

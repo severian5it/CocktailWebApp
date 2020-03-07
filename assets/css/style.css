@@ -1,17 +1,15 @@
 /*------------GENERAL------------*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (min-width: 601px) {
   html {
     font-size: 12px;
   }
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
   html {
-    font-size: 15px;
+    font-size: 22px;
   }
 }
 
@@ -26,6 +24,7 @@ html {
   box-sizing: inherit;
 }
 
+/* set the footer always at the bottom regardless of search results*/
 .fixed-footer-body{
   position: relative;
   margin: 0;
@@ -33,6 +32,22 @@ html {
   min-height: 100%;
   font-family: "Open Sans", Arial, sans-serif;
 }
+
+/*----------NAVBAR---------*/
+
+.navbar {
+    background: none;
+    border-color: transparent;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-collapse {
+    text-align: right;
+    border-top: 1px solid transparent;
+    overflow-x: hidden;
+}
+
 /*------------LANDING------------*/
 .background-landing {
     background-attachment: fixed;
@@ -43,7 +58,7 @@ html {
 }
 
 .background-landing .btn {
-  border-radius: 40px;
+  border-radius: 12em;
   width: 13em;
 }
 
@@ -57,11 +72,11 @@ html {
 
 .searchTerm {
   width: 100%;
-  border: 3px solid;
+  border: 0.5em solid;
   border-right: none;
-  padding: 5px;
-  height: 54px;
-  border-radius: 5px 0 0 5px;
+  padding: 1em;
+  height: 3.6em;
+  border-radius: 0.8em 0 0 0.8em;
   outline: none;
   color: #9DBFAF;
 }
@@ -71,13 +86,13 @@ html {
 }
 
 .searchButton {
-  width: 40px;
-  height: 54px;
-  border: 1px solid #00B4CC;
+  width: 2.4em;
+  height: 2.7em;
+  border: 0.2em solid #00B4CC;
   background: #00B4CC;
   text-align: center;
   color: #fff;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 0.3em 0.3em 0;
   cursor: pointer;
   font-size: 20px;
 }

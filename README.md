@@ -45,8 +45,6 @@
 4. [Testing](#testing)
 
 5. [Deployment](#deployment)
-    - [How to run this project locally](#how-to-run-this-project-locally)
-    - [Heroku Deployment](#heroku-deployment)
 
 6. [Credits](#credits)
     - [Content](#content)

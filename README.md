@@ -6,7 +6,7 @@
 </div>
 
 <div align="center">
-    <a href="https://severian5it.github.io/CocktailWebApp/"> View Website in GitHub Pages </a>
+    <a href="https://severian5it.github.io/CocktailWebApp/"> View  Live Website</a>
 </div>
 
 
@@ -135,11 +135,11 @@ Wireframe mockups, created using [Balsamiq](https://balsamiq.com/), is available
     1. [Landing](assets/Wireframes/LandingLaptop.pdf)
     1. [Search](assets/Wireframes/SearchLaptop.pdf)
     1. [Catalogue](assets/Wireframes/CatalogueLaptop.pdf)
- 1. [Tablet](
+ 1. Tablet
      1. [Landing](assets/Wireframes/LandingTablet.pdf)
      1. [Search](assets/Wireframes/SearchTablet.pdf)
      1. [Catalogue](assets/Wireframes/CatalogueTablet.pdf)
- 1. [Mobile]
+ 1. Mobile
      1. [Landing](assets/Wireframes/LandingMobile.pdf)
      1. [Search](assets/Wireframes/SearchMobile.pdf)
      1. [Catalogue](assets/Wireframes/CatalogueMobile.pdf)

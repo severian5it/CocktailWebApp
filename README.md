@@ -282,32 +282,19 @@ code can be fetched locally with following command
 ```shell
 git clone https://github.com/severian5it/CocktailWebApp.git
 ```
-## how to run this project locally
-is possible to run it locally running a python server on the same location on index.html and then visiting 
-*localhost:8000*
-```python
-python -m SimpleHTTPServer
-```
-## heroku deployment
-Code was deployed to heroku which features a full integration with git with the following instructions.
-First use heroku create CLI command, which  instantiates a new empty application on Heroku, 
-along with an associated empty Git repository.
-```shell
-heroku apps:create CocktailWebApp
-```
-then, every time the local development was satisfying, the local branch can be pushed in production
-with following instruction:
-```shell
-git push heroku master
-```
-no variable must be set, all the dependency are managed by the file `index.php`, which presence is mandatory
-, and must contains at least the entry point for the application, as below:
-```php
-<?php header( 'Location: /index.html' ) ;  ?>
-```
+This particular project does not require any local deployment.
 
-as matter of fact, push to *Heroku* was automated so each push to the master was a push to Heroku 
-itself. 
+Deployment and source control was entirely done via GitHub. My repository can be found here:
+
+* **Repo**: https://github.com/severian5it/CocktailWebApp
+I've published the source code built from the master branch using **GitHub Pages**.
+
+The live site can be found here:
+
+* **GH Pages**: https://severian5it.github.io/CocktailWebApp/
+There are no difference between the deployed version and the development version.
+
+GitHub Page as been chose for simplicity of deployment. 
 
 # Credits
 

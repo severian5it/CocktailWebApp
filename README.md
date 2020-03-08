@@ -191,7 +191,7 @@ the creater. The footer is moving according to the number of cocktail displayed.
 
 ### Colors Palette
 
-![Color Palette](assets/images/palette.png)
+![Color Palette](assets/images/ColourPalette.png)
 
 Peach has been used in Landing Page, along a combination of dark colour, while in features page, 
 gradient of peaches and white, along with a simple design has been used.

@@ -131,9 +131,18 @@ look good and be usable on any of these devices.
 ### Wireframes
 
 Wireframe mockups, created using [Balsamiq](https://balsamiq.com/), is available in diffent format:
- 1. [Laptop](wireframes/Wireframe-Laptop.pdf)
- 1. [Tablet](wireframes/Wireframe-Tablet.pdf)
- 1. [Mobile](wireframes/Wireframe-Mobile.pdf)
+ 1. Laptop
+    1. [Landing](assets/Wireframes/LandingLaptop.pdf)
+    1. [Search](assets/Wireframes/SearchLaptop.pdf)
+    1. [Catalogue](assets/Wireframes/CatalogueLaptop.pdf)
+ 1. [Tablet](
+     1. [Landing](assets/Wireframes/LandingTablet.pdf)
+     1. [Search](assets/Wireframes/SearchTablet.pdf)
+     1. [Catalogue](assets/Wireframes/CatalogueTablet.pdf)
+ 1. [Mobile]
+     1. [Landing](assets/Wireframes/LandingMobile.pdf)
+     1. [Search](assets/Wireframes/SearchMobile.pdf)
+     1. [Catalogue](assets/Wireframes/CatalogueMobile.pdf)
  
 
 # Features

@@ -10,7 +10,8 @@
     <!-- Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700"
+          rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="assets/libraries/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
@@ -50,149 +51,200 @@
 <!--*******Alphabet Button Palette*******-->
 <div class="container-fluid">
     <div class="row mt-1">
-    <div class="col text-center">
-        <div id="alphabetGroup" class="btn-group btn-group-sm flex-wrap" role="group">
-            <button type="button" class="btn btn-sm peach-gradient" id="onEntry"
-                            onclick="letterPagination('a')">A</button>
-            <button id="btnB" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('b')">B</button>
-            <button id="btnC" type="button" class="btn btn-sm peach-gradient"onclick="letterPagination('c')">C</button>
-            <button id="btnD" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('d')">D</button>
-            <button id="btnE" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('e')">E</button>
-            <button id="btnF" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('f')">F</button>
-            <button id="btnG" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('g')">G</button>
-            <button id="btnH" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('h')">H</button>
-            <button id="btnI" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('i')">I</button>
-            <button id="btnJ" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('j')">J</button>
-            <button id="btnK" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('k')">K</button>
-            <button id="btnL" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('l')">L</button>
-            <button id="btnM" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('m')">M</button>
-            <button id="btnN" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('n')">N</button>
-            <button id="btnO" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('o')">O</button>
-            <button id="btnP" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('p')">P</button>
-            <button id="btnQ" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('q')">Q</button>
-            <button id="btnR" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('r')">R</button>
-            <button id="btnS" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('s')">S</button>
-            <button id="btnT" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('t')">T</button>
-            <button id="btnU" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('u')">U</button>
-            <button id="btnV" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('v')">V</button>
-            <button id="btnW" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('w')">W</button>
-            <button id="btnX" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('x')">X</button>
-            <button id="btnY" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('y')">Y</button>
-            <button id="btnZ" type="button" class="btn btn-sm peach-gradient" onclick="letterPagination('z')">Z</button>
-        </div>
-    </div>
-</div>
-
-
-<!--*******RESULTS*******-->
-
-<section id="results">
-    <div class="container-fluid">
-        <div class="row align-items-start" id="data">
-
-        </div>
-    </div>
-
-</section>
-<!--*******MODAL DETAILS*******-->
-
-<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade"
-     id="modalDetails" role="dialog"
-     tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header" id="modal-cocktail-header">
-            </div>
-            <div class="modal-body" id="modal-cocktail">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal" type="button">Close
+        <div class="col text-center">
+            <div class="btn-group btn-group-sm flex-wrap" id="alphabetGroup" role="group">
+                <button class="btn btn-sm peach-gradient" id="onEntry" onclick="letterPagination('a')"
+                        type="button">A
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnB" onclick="letterPagination('b')"
+                        type="button">B
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnC" onclick="letterPagination('c')"
+                        type="button">C
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnD" onclick="letterPagination('d')"
+                        type="button">D
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnE" onclick="letterPagination('e')"
+                        type="button">E
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnF" onclick="letterPagination('f')"
+                        type="button">F
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnG" onclick="letterPagination('g')"
+                        type="button">G
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnH" onclick="letterPagination('h')"
+                        type="button">H
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnI" onclick="letterPagination('i')"
+                        type="button">I
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnJ" onclick="letterPagination('j')"
+                        type="button">J
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnK" onclick="letterPagination('k')"
+                        type="button">K
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnL" onclick="letterPagination('l')"
+                        type="button">L
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnM" onclick="letterPagination('m')"
+                        type="button">M
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnN" onclick="letterPagination('n')"
+                        type="button">N
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnO" onclick="letterPagination('o')"
+                        type="button">O
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnP" onclick="letterPagination('p')"
+                        type="button">P
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnQ" onclick="letterPagination('q')"
+                        type="button">Q
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnR" onclick="letterPagination('r')"
+                        type="button">R
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnS" onclick="letterPagination('s')"
+                        type="button">S
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnT" onclick="letterPagination('t')"
+                        type="button">T
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnU" onclick="letterPagination('u')"
+                        type="button">U
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnV" onclick="letterPagination('v')"
+                        type="button">V
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnW" onclick="letterPagination('w')"
+                        type="button">W
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnX" onclick="letterPagination('x')"
+                        type="button">X
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnY" onclick="letterPagination('y')"
+                        type="button">Y
+                </button>
+                <button class="btn btn-sm peach-gradient" id="btnZ" onclick="letterPagination('z')"
+                        type="button">Z
                 </button>
             </div>
         </div>
     </div>
-</div>
-<!--*******Contacts*******-->
 
-<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalContactForm"
-     role="dialog"
-     tabindex="-1">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Suggest us any cocktail to
-                    insert!</h4>
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body mx-3">
-                <div class="md-form mb-5">
-                    <i class="fas fa-user prefix grey-text"></i>
-                    <input class="form-control validate" id="form34" type="text">
-                    <label data-error="wrong" data-success="right" for="form34">Your
-                        name</label>
-                </div>
 
-                <div class="md-form mb-5">
-                    <i class="fas fa-envelope prefix grey-text"></i>
-                    <input class="form-control validate" id="form29" type="email">
-                    <label data-error="wrong" data-success="right" for="form29">Your
-                        email</label>
-                </div>
+    <!--*******RESULTS*******-->
 
-                <div class="md-form mb-5">
-                    <i class="fas fa-tag prefix grey-text"></i>
-                    <input class="form-control validate" id="form32" type="text">
-                    <label data-error="wrong" data-success="right" for="form32">Subject</label>
-                </div>
-
-                <div class="md-form">
-                    <i class="fas fa-pencil prefix grey-text"></i>
-                    <textarea class="md-textarea form-control" id="form8" rows="4"
-                              type="text"></textarea>
-                    <label data-error="wrong" data-success="right" for="form8">Your
-                        message</label>
-                </div>
+    <section id="results">
+        <div class="container-fluid">
+            <div class="row align-items-start" id="data">
 
             </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-secondary" onclick="sendMail(this)">Send <i
-                        class="fas fa-paper-plane ml-1"></i>
-                </button>
+        </div>
+
+    </section>
+    <!--*******MODAL DETAILS*******-->
+
+    <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade"
+         id="modalDetails" role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" id="modal-cocktail-header">
+                </div>
+                <div class="modal-body" id="modal-cocktail">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <!--*******Contacts*******-->
 
-<!--*******FOOTER*******-->
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalContactForm"
+         role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Suggest us any cocktail to
+                        insert!</h4>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <i class="fas fa-user prefix grey-text"></i>
+                        <input class="form-control validate" id="form34" type="text">
+                        <label data-error="wrong" data-success="right" for="form34">Your
+                            name</label>
+                    </div>
 
-<div class="footer peach-gradient">Copyright 2020 <strong>Pierluca Del Buono </strong>.
-</div>
-<!-- jQuery -->
-<script src="assets/libraries/js/jquery.min.js" type="text/javascript"></script>
-<!-- Bootstrap tooltips -->
-<script src="assets/libraries/js/popper.min.js" type="text/javascript"></script>
-<!-- Bootstrap core JavaScript -->
-<script src="assets/libraries/js/bootstrap.min.js" type="text/javascript"></script>
-<!-- MDB core JavaScript -->
-<script src="assets/libraries/js/mdb.min.js" type="text/javascript"></script>
-<script crossorigin="anonymous" src="https://kit.fontawesome.com/2634de6a5c.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
-        type="text/javascript"></script>
-<script type="text/javascript">
-    (function () {
-        emailjs.init("user_6QWtZ07QnotlGgzAFHDng");
-    })();
-</script>
-<script src="assets/js/mail.js" type="text/javascript"></script>
-<script src="assets/js/apiCall.js" type="text/javascript"></script>
-<script src="assets/js/helper.js" type="text/javascript"></script>
-<script>
-    $(function () {
-        $('#onEntry').click();
-    });
-</script>
+                    <div class="md-form mb-5">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input class="form-control validate" id="form29" type="email">
+                        <label data-error="wrong" data-success="right" for="form29">Your
+                            email</label>
+                    </div>
+
+                    <div class="md-form mb-5">
+                        <i class="fas fa-tag prefix grey-text"></i>
+                        <input class="form-control validate" id="form32" type="text">
+                        <label data-error="wrong" data-success="right" for="form32">Subject</label>
+                    </div>
+
+                    <div class="md-form">
+                        <i class="fas fa-pencil prefix grey-text"></i>
+                        <textarea class="md-textarea form-control" id="form8" rows="4"
+                                  type="text"></textarea>
+                        <label data-error="wrong" data-success="right" for="form8">Your
+                            message</label>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-secondary" onclick="sendMail(this)">Send <i
+                            class="fas fa-paper-plane ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--*******FOOTER*******-->
+
+    <div class="footer peach-gradient">Copyright 2020 <strong>Pierluca Del Buono </strong>.
+    </div>
+    <!-- jQuery -->
+    <script src="assets/libraries/js/jquery.min.js" type="text/javascript"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="assets/libraries/js/popper.min.js" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="assets/libraries/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- MDB core JavaScript -->
+    <script src="assets/libraries/js/mdb.min.js" type="text/javascript"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/2634de6a5c.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_6QWtZ07QnotlGgzAFHDng");
+        })();
+    </script>
+    <script src="assets/js/mail.js" type="text/javascript"></script>
+    <script src="assets/js/apiCall.js" type="text/javascript"></script>
+    <script src="assets/js/helper.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('#onEntry').click();
+        });
+    </script>
 </body>
 </html>

@@ -38,8 +38,7 @@ html {
 .navbar {
     background: none;
     border-color: transparent;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .navbar .navbar-collapse {

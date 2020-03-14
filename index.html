@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
     <title>Cocktail Web Search Engine</title>
     <link href="assets/images/cocktail.ico" rel="icon">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="assets/libraries/css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="assets/libraries/css/mdb.css" rel="stylesheet">
+    <!-- custom styles -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
-<!--*******Jumbotron*******-->
+<!--Main layout-->
+<main class="mt-5">
+
 <div class="view background-landing">
     <div class="mask rgba-stylish-strong flex-center">
         <div class="container-fluid ">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center orange-text"><i class="fas fa-cocktail"></i> Cocktail
-                    </h2>
-                    <h1 class="text-white text-center py-5 px-4">Welcome to
+                    <h4 class="text-center orange-text"><i class="fas fa-cocktail"></i> Cocktail
+                    </h4>
+                    <h3 class="text-white text-center py-5 px-4">Welcome to
                         <br>the Cocktail Database
-                    </h1>
+                    </h3>
                 </div>
                 <!--end of col-12-->
             </div>
             <!--end of row-->
             <div class="row p-0 m-0 my-4">
                 <div class="col-12 col-lg-6 mx-auto">
-                    <h2 class="my-1 px-2 text-white text-center">Do you have an ingredient?
-                        <br>See what you can mix up!</h2>
+                    <p class="my-1 px-2 text-white text-center">Do you have an ingredient? See what you can mix up!</p>
                 </div>
 
-                <div class="col-12 mx-auto my-3">
+                <div class="col-12 mx-auto mb-3">
                     <!--Call to action-->
                     <p class="my-3 text-center">
-                        <a href="search.html" class="btn peach-gradient "><i
+                        <a class="btn peach-gradient " href="search.html"><i
                                 class="fas fa-search left"></i>
                             Search</a>
                     </p>
@@ -48,18 +54,15 @@
 
             </div>
             <!--end of row-->
-                            <br>
-
             <div class="row p-0 m-0 my-4">
                 <div class="col-12 col-lg-6 mx-auto">
-                    <h2 class="my-1 text-white text-center">Or browse the wide selection
-                        <br>in the database!</h2>
+                    <p class="my-1 text-white text-center">Or browse the wide selection in the database!</p>
                 </div>
 
-                <div class="col-12 mx-auto my-3">
+                <div class="col-12 mx-auto mb-3">
                     <!--Call to action-->
                     <p class="my-3 text-center">
-                        <a href="catalogue.html" class="btn peach-gradient "><i
+                        <a class="btn peach-gradient " href="catalogue.html"><i
                                 class="fas fa-file left"></i>
                             Catalogue</a>
                     </p>
@@ -69,21 +72,19 @@
         </div>
     </div>
 </div>
+
+    <!--Main container-->
+</main>
+<!--Main layout-->
+
 </div>
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/css/mdb.min.css"
-          rel="stylesheet">
-    <!-- JQuery -->
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/js/mdb.min.js"></script>
+<!-- jQuery -->
+<script src="assets/libraries/js/jquery.min.js" type="text/javascript"></script>
+<!-- Bootstrap tooltips -->
+<script src="assets/libraries/js/popper.min.js" type="text/javascript"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="assets/libraries/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- MDB core JavaScript -->
+<script src="assets/libraries/js/mdb.min.js" type="text/javascript"></script>
 </body>
 </html>

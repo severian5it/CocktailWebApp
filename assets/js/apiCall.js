@@ -86,7 +86,7 @@ function writeToModal(url) {
             }, {
                 "ingredient": item.strIngredient3,
                 "measure": item.strMeasure3
-            },{
+            }, {
                 "ingredient": item.strIngredient4,
                 "measure": item.strMeasure4
             }, {
@@ -95,7 +95,7 @@ function writeToModal(url) {
             }, {
                 "ingredient": item.strIngredient6,
                 "measure": item.strMeasure6
-            },{
+            }, {
                 "ingredient": item.strIngredient7,
                 "measure": item.strMeasure7
             }, {
@@ -110,13 +110,14 @@ function writeToModal(url) {
 
             function pushIngredient(item) {
                 if (item.ingredient !== null) {
-                if (item.measure !== null) {
-                    dataRow.push(`<li>${item.measure} of ${item.ingredient}</li>`)
-                } else {
-                    dataRow.push(`<li>${item.ingredient}</li>`)
+                    if (item.measure !== null) {
+                        dataRow.push(`<li>${item.measure} of ${item.ingredient}</li>`)
+                    } else {
+                        dataRow.push(`<li>${item.ingredient}</li>`)
+                    }
                 }
             }
-            }
+
             dataRow.push(`</ul>`)
             tableRowsBody.push(`${dataRow}`);
         });

@@ -49,14 +49,6 @@ html {
 }
 
 
-h1 {
-    font-size: 5.5em;
-}
-
-h2 {
-    letter-spacing: 0.2em;
-}
-
 /*------------LANDING------------*/
 .background-landing {
     background-attachment: fixed;
@@ -67,9 +59,7 @@ h2 {
 }
 
 .background-landing .btn {
-  border-radius: 12em;
-  height: 4em;
-  width: 16em;
+  border-radius: 2em;
 }
 
 

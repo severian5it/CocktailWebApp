@@ -81,6 +81,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /*------------SEARCH------------*/
 
+.wrap {
+    margin-top: 20em;
+}
+
 .search {
   width: 100%;
   position: relative;
@@ -89,14 +93,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .searchTerm {
   width: 100%;
-  border: 0.5em solid;
-  border-right: none;
+  border: 0.1em solid;
   padding: 1em;
-  height: 2em;
-  border-radius: 0.8em 0 0 0.8em;
+  border-right: none;
   outline: none;
   color: #9DBFAF;
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 .searchTerm:focus{
@@ -104,9 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .searchButton {
-  width: 6vw;
-  height: 3.9em;
-  border: 0.2em solid #00B4CC;
+  border: 0.1em solid #00B4CC;
   background: #00B4CC;
   text-align: center;
   color: #fff;
@@ -116,19 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*Resize the wrap to see the search bar change!*/
-.wrap{
-  width: 40vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-.wrapafter{
-  width: 40vw;
-  margin: 0 auto;
-  float: none;
-}
 
 .hidden {
     display: none;
@@ -140,6 +128,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-group .btn {
+    width: 2em;
+    margin-left: 0.5em;
     font-size: 1.1em;
 }
 /*------------SEARCH&CATALOGUE------------*/

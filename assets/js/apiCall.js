@@ -20,12 +20,12 @@ function writeToDocument(url) {
         data.forEach(function (item) {
             let dataRow = [];
             dataRow.push('<div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-row justify-content-center">')
-            dataRow.push('<div class="card shadow-lg p-3 mb-5 bg-white rounded mt-4">')
+            dataRow.push('<div class="card shadow-lg p-2 mb-3 bg-white rounded mt-3">')
             dataRow.push('<div class="image">')
             dataRow.push(`<img src=${item.strDrinkThumb} class="img-fluid" onclick="openGalleryModal(${item.idDrink})">`)
             dataRow.push('</div>')
             dataRow.push('<div class="card-body">')
-            dataRow.push(`<h4 class="card-title">${item.strDrink}</h4>`)
+            dataRow.push(`<h5 class="card-title">${item.strDrink}</h5>`)
             dataRow.push('</div>')
             dataRow.push('</div>')
             dataRow.push('</div>')

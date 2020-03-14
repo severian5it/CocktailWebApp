@@ -16,7 +16,6 @@ function writeToDocument(url) {
     let el = document.getElementById("data");
 
     callApi(url).then(function (response) {
-        console.log(response);
         data = response.drinks;
         data.forEach(function (item) {
             let dataRow = [];
@@ -153,7 +152,6 @@ function writeToModal(url) {
 function openGalleryModal(id) {
 
     let url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
-    console.log(url + id)
     writeToModal(url + id)
     $('#modalDetails').modal('show');
 

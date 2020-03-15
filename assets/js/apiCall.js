@@ -74,6 +74,7 @@ function writeToModal(url) {
             dataRow.push(`<p><bold>Instructions: </bold>${item.strInstructions}</p>`);
             dataRow.push(`<p><bold>Ingredients: </bold> <ul style="list-style-type:disc;"></p>`);
 
+            // element to add to the modal
             const ingredientToLoop = [{
                 "ingredient": item.strIngredient1,
                 "measure": item.strMeasure1

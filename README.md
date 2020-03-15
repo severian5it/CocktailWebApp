@@ -283,40 +283,73 @@ I kept track of all the test on this [matrix](assets/test/manualTest.xlsx)
 
 ## Automated Testing
 
-All 15 functionalites of the JavaScript functions have been tested by **Jasmine**. It took me 
+All 15 functionalities implemented by JavaScript functions have been tested by **Jasmine**. It took me 
 some time to figure out how to process Fetch call, and I implemented it with promises.
 The automated testing functionalities was really helpful to prevent any code regression, and 
 test can be executed at this [link](https://severian5it.github.io/CocktailWebApp/test.html).
 
 ![Jasmine_Report](assets/images/Jasmine_Report.png)
 
-Bugs: most relevant bugs to tackle involved *bootstrap4 card* and they were shown after being 
+*Bugs*: most relevant bugs to tackle involved *bootstrap4 card* and they were shown after being 
 returned by API query; in the first stage of the development they were managed by long JavaScript 
 code, in the latest stage card-deck class by bootstrap was solving most of the issue.
 
 Other problems were given by how to access all the informations provided by the JSON APIs, but this 
-required more patience than anything less
+required more patience than anything less.
+
+In the latest stage of development who reviewed my code found lack of responsiveness on small device,
+this was due to the usage of outdated bootstrap classes, and to the absence
 
 # Deployment
 
 Site has been developed on PyCharm and pushed to GitHub via terminal commands.
-code can be fetched locally with following command
-```shell
-git clone https://github.com/severian5it/CocktailWebApp.git
-```
-This particular project does not require any local deployment.
+Deployment and source control was entirely done via GitHub, using the following steps.
 
-Deployment and source control was entirely done via GitHub. My repository can be found here:
+* command git add 'filename' - to update what will be committed.
+
+* command git commit - to commit the changes.
+
+Using git push command all changes from the local repository were pushed to the remote one on GitHub.
+
+My repository can be found here:
 
 * **Repo**: https://github.com/severian5it/CocktailWebApp
-I've published the source code built from the master branch using **GitHub Pages**.
+I've published the source code built from the master branch using **GitHub Pages**
+
+To deploy the project from GitHub follow these steps.
+
+1. On GitHub website log onto account and navigated to the [repository](https://github.com/severian5it/CocktailWebApp).
+
+1. Under repository name, click on Settings tab.
+
+1. Scroll down to the GitHub Pages section.
+
+1. On the Select source drop-down menu I selected master as my GitHub Pages publishing source.
+
+1. I clicked Save.
 
 The live site can be found here:
 
 * **GH Pages**: https://severian5it.github.io/CocktailWebApp/
-There are no difference between the deployed version and the development version.
+There are no difference between the deployed version and the development version; GitHub Page has 
+been chose for simplicity of deployment. 
 
-GitHub Page as been chose for simplicity of deployment. 
+code can be fetched locally with following steps:
+
+1. On GitHub navigate to the [repository](https://github.com/severian5it/CocktailWebApp).
+
+1. Under the repository name, click Clone or download.
+
+1. In the Clone with HTTPs section, copy the clone URL for the repository.
+
+1. Open terminal.
+
+1. Change the current working directory to the location where to clone it.
+
+1. Type git clone and paste the URL copied above.
+```shell
+git clone https://github.com/severian5it/CocktailWebApp.git
+```
 
 # Credits
 
@@ -335,7 +368,7 @@ to [*Ash Edmonds*](https://unsplash.com/@badashproducts).
 ## Acknowledgements
 
 - I received inspiration and guidance for this project from my mentor, *Aaron Sinnot*, and from 
-*Simen Daehlin*.
+*Simen Daehlin*, who reviewed my code and spotted defect on responsiveness.
 
 # Contact
 To contact me feel free to email

@@ -150,3 +150,92 @@ describe("function OpenGalleryModal()", function () {
     });
 
 });
+
+describe("function sendMail()", function () {
+    beforeEach(function () {
+        setFixtures(`<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="modalContactForm"
+         role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Suggest us any cocktail to
+                        insert!</h4>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <i class="fas fa-user prefix grey-text"></i>
+                        <input class="form-control validate" id="form34" type="text">
+                        <label data-error="wrong" data-success="right" for="form34">Your
+                            name</label>
+                    </div>
+
+                    <div class="md-form mb-5">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input class="form-control validate" id="form29" type="email">
+                        <label data-error="wrong" data-success="right" for="form29">Your
+                            email</label>
+                    </div>
+
+                    <div class="md-form mb-5">
+                        <i class="fas fa-tag prefix grey-text"></i>
+                        <input class="form-control validate" id="form32" type="text">
+                        <label data-error="wrong" data-success="right" for="form32">Subject</label>
+                    </div>
+
+                    <div class="md-form">
+                        <i class="fas fa-pencil prefix grey-text"></i>
+                        <textarea class="md-textarea form-control" id="form8" rows="4"
+                                  type="text"></textarea>
+                        <label data-error="wrong" data-success="right" for="form8">Your
+                            message</label>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-secondary" onclick="sendMail(this)">Send <i
+                            class="fas fa-paper-plane ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>`);
+        let sent;
+
+    });
+
+    it("should exist", function () {
+        expect(sendMail).toBeDefined();
+    });
+
+    it("should send mail when field are inputed correctly", async () => {
+        document.getElementById("form34").value ='Pierluca';
+        document.getElementById("form29").value = 'pierluca@gmail.com';
+        document.getElementById("form8").value = 'stogatto';
+
+        let promise = new Promise(function (resolve, reject) {
+            sendMail();
+            setTimeout(() => resolve(true), 1000);
+        });
+        sent = await promise;
+        expect(sent).toBeTruthy();
+    });
+
+        it("should not send mail when field are not inputed correctly", async () => {
+        document.getElementById("form34").value ='Pierluca';
+        document.getElementById("form29").value = 'pierlucagmail.com';
+        document.getElementById("form8").value = 'stogatto';
+
+        let promise = new Promise(function (resolve, reject) {
+            let outcome = sendMail();
+            setTimeout(() => resolve(outcome), 1000);
+        });
+        sent = await promise;
+        console.log
+        expect(sent).toBeFalsy();
+    });
+
+});

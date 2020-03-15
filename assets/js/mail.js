@@ -12,6 +12,8 @@ function sendMail() {
             "message": `${message.value}`
         })
         $('#modalContactForm').modal('toggle');
+        return true;
     }
+    return false;
 
 }

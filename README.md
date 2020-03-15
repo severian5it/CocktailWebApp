@@ -43,6 +43,8 @@
 
 
 4. [Testing](#testing)
+    - [Manual Testing](#Manual-Testing)
+    - [Automatic Testing](#Automated-Testing)
 
 5. [Deployment](#deployment)
 
@@ -237,15 +239,24 @@ In terms of Tools I used the following tools, to develop and design:
 
 # Testing
 
-I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [W3C Markup Validation Service](https://validator.w3.org/) 
-to check the validity of the website code.
+## Manual Testing
 
-The work has been reviewed by a number of relatives and friend, mostly on the mobile, each of them giving suggestions.
+I used following validator to check the validity of the website code:
+
+* **css**: [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) 
+* **HTML**: [W3C Markup Validation Service](https://validator.w3.org/)
+* **JavaScript**: [JavaScript Beautify Tools](http://beautifytools.com/javascript-validator.php)
+
+The work has been reviewed by a number of relatives and friend, mostly on the mobile,
+each of them giving suggestions.
 
 The website has been test with multiple resizing to test the its responsiveness.
 via the *inspect* chrome functionality it has been examined for the most popular mobile devices such as 
+* Samsung 9+
 * iPhone 6/7/8
+* iPhone X
 * iPad
+* iPad Pro
 * Galaxy S5
 
 also following section has been tested:
@@ -265,6 +276,10 @@ also following section has been tested:
 1. Random Features, calling each time a different cocktail.
 
 1. Landing Page, accessing all the page of the site.
+
+I kept track of all the test on this [matrix](assets/test/ManualTest.xlsx)
+
+## Automated Testing
 
 Bugs: most relevant bugs to tackle involved *bootstrap4 card* and they were shown after being 
 returned by API query; in the first stage of the development they were managed by long JavaScript 

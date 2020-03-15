@@ -70,8 +70,6 @@ h1, h2, h3, h4, h5, h6 {
  font-family: 'Abril Fatface', serif;
 }
 
-
-
 @media only screen and (max-width: 767px) {
   #about-residence {
     /* smaller landing page for mobile device */
@@ -115,9 +113,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.4em;
 }
 
-/*Resize the wrap to see the search bar change!*/
-
-
 .hidden {
     display: none;
 }
@@ -146,7 +141,6 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-/* Add a hover effect (blue shadow) */
 #results img:hover {
   box-shadow: 0 0 0.1em 0.1em rgba(0, 140, 186, 0.5);
 }
@@ -160,7 +154,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 20em;
     margin: 1em;
 }
-
 
 .close {
   color: #aaaaaa;

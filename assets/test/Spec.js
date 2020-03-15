@@ -50,7 +50,7 @@ describe("function writeToModal(url)", function () {
     beforeEach(function () {
         setFixtures(`<div class="modal-header" id="modal-cocktail-header"></div><div class="modal-body" id="modal-cocktail">...</div>`);
         let url;
-        let inputVar;
+        let inpuVar;
 
     });
 
@@ -69,6 +69,28 @@ describe("function writeToModal(url)", function () {
         expect($('#modal-cocktail-header').html().length).toBeGreaterThan(0);
         expect($('#modal-cocktail').html().length).toBeGreaterThan(0);
 
+    });
+
+});
+
+describe("function randomCocktail(url)", function () {
+    beforeEach(function () {
+        setFixtures(`<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modalDetails" role="dialog" tabindex="-1">`);
+        let url;
+    });
+
+    it("should exist", function () {
+        expect(randomCocktail).toBeDefined();
+    });
+
+    it("should show detail modal when invoked", async () => {
+        url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+        let promise = new Promise(function (resolve, reject) {
+            randomCocktail(url);
+            setTimeout(() => resolve(true), 1000);
+        });
+        await promise;
+        expect($('#modalDetails').hasClass("show")).toBeTruthy();
     });
 
 });

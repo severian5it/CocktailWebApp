@@ -14,7 +14,6 @@ async function callApi(url) {
 function writeToDocument(url) {
     let tableRows = [];
     let el = document.getElementById("data");
-
     callApi(url).then(function (response) {
         data = response.drinks;
         data.forEach(function (item) {
@@ -33,7 +32,6 @@ function writeToDocument(url) {
         });
 
         el.innerHTML = `${tableRows}`.replace(/,/g, "");
-
     }).catch(function (err) {
         $('#modalMissing').modal('show');
     });
@@ -44,7 +42,7 @@ function writeToDocument(url) {
  */
 function searchSubmit() {
     let url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
-    var inputVal = document.getElementById("toSearch").value;
+    let inputVal = document.getElementById("toSearch").value;
     writeToDocument(url + inputVal)
     document.getElementById("wrapper").classList.remove('wrap');
 }

@@ -44,6 +44,36 @@ describe("function writeToDocument(url)", function () {
     });
 
 });
+
+
+describe("function writeToModal(url)", function () {
+    beforeEach(function () {
+        setFixtures(`<div class="modal-header" id="modal-cocktail-header"></div><div class="modal-body" id="modal-cocktail">...</div>`);
+        let url;
+        let inputVar;
+
+    });
+
+    it("should exist", function () {
+        expect(writeToModal).toBeDefined();
+    });
+
+    it("should write on Cocktail Modal data when invoked with an id", async () => {
+        url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
+        inputVar = 11007;
+        let promise = new Promise(function (resolve, reject) {
+            writeToModal(url + inputVar);
+            setTimeout(() => resolve(true), 1000);
+        });
+        await promise;
+        expect($('#modal-cocktail-header').html().length).toBeGreaterThan(0);
+        expect($('#modal-cocktail').html().length).toBeGreaterThan(0);
+
+    });
+
+});
+
+/*
 describe("initial startup values and function calls", function() {
     beforeEach(function() {
         jasmine.clock().install();
@@ -61,7 +91,7 @@ describe("initial startup values and function calls", function() {
     });
 
 });
-/*
+
     it("write Document invoked with cocktail id should populate data", function () {
         url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
         inputVar = 552;

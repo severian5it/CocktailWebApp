@@ -277,16 +277,25 @@ also following section has been tested:
 
 1. Landing Page, accessing all the page of the site.
 
-I kept track of all the test on this [matrix](assets/test/ManualTest.xlsx)
+I kept track of all the test on this [matrix](assets/test/manualTest.xlsx)
+
+![Manual Testing Matrix](assets/images/Manual_Test_Matrix.png)
 
 ## Automated Testing
+
+All 15 functionalites of the JavaScript functions have been tested by **Jasmine**. It took me 
+some time to figure out how to process Fetch call, and I implemented it with promises.
+The automated testing functionalities was really helpful to prevent any code regression, and 
+test can be executed at this [link](https://severian5it.github.io/CocktailWebApp/test.html).
+
+![Jasmine_Report](assets/images/Jasmine_Report.png)
 
 Bugs: most relevant bugs to tackle involved *bootstrap4 card* and they were shown after being 
 returned by API query; in the first stage of the development they were managed by long JavaScript 
 code, in the latest stage card-deck class by bootstrap was solving most of the issue.
 
 Other problems were given by how to access all the informations provided by the JSON APIs, but this 
-required more patience than anything lese
+required more patience than anything less
 
 # Deployment
 

@@ -233,8 +233,9 @@ In terms of Tools I used the following tools, to develop and design:
     -  My favourite IDE, used to generate a local website and edit each file.
 - [Balsamiq](https://balsamiq.com/)
     - WireFrame Designer, used with CodeInstitute license, definitively to best resource to wireframe.
-- [Google Chrome](https://www.google.com/chrome/) and [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-    - Site has been tested on both popular Browser for several distinct dimensions.
+- [Google Chrome](https://www.google.com/chrome/), [Firefox](https://www.mozilla.org/en-US/firefox/new/), 
+[Safari](https://www.apple.com/safari/) and [Internet Explorer](https://www.microsoft.com/en-us/download/internet-explorer.aspx)
+    - Site has been tested on all popular Browser for several distinct dimensions.
     
 
 # Testing
@@ -314,6 +315,7 @@ Using git push command all changes from the local repository were pushed to the 
 My repository can be found here:
 
 * **Repo**: https://github.com/severian5it/CocktailWebApp
+
 I've published the source code built from the master branch using **GitHub Pages**
 
 To deploy the project from GitHub follow these steps.
@@ -331,6 +333,7 @@ To deploy the project from GitHub follow these steps.
 The live site can be found here:
 
 * **GH Pages**: https://severian5it.github.io/CocktailWebApp/
+
 There are no difference between the deployed version and the development version; GitHub Page has 
 been chose for simplicity of deployment. 
 
@@ -357,8 +360,12 @@ git clone https://github.com/severian5it/CocktailWebApp.git
 - The structure of the project was modeled on the examples provided by the **Code Institute**, in particular on 
 [Haley Schafer Portfolio](https://github.com/Code-Institute-Solutions/StudentExampleProjectGradeFive)
 
-Really useful resources during development were [W3school](https://www.w3schools.com/) and [Stack Overflow](https://stackoverflow.com/)
-and [Rapid API](https://rapidapi.com/), which provided a lot of example to place my work on.
+Really useful resources during development were:
+* [W3school](https://www.w3schools.com/)
+* [Stack Overflow](https://stackoverflow.com/)
+* [Rapid API](https://rapidapi.com/)
+
+The last provided a lot of example to place my work on.
 
 
 ## Media

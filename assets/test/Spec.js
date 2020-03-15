@@ -123,8 +123,30 @@ describe("function searchSubmit()", function () {
             setTimeout(() => resolve(true), 1000);
         });
         await promise;
-        console.log($('#wrapper'))
         expect($('#wrapper').hasClass("wrap")).toBeFalsy();
+    });
+
+});
+
+describe("function OpenGalleryModal()", function () {
+    beforeEach(function () {
+        setFixtures(`<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modalDetails" role="dialog" tabindex="-1">`);
+        let inpuVar;
+
+    });
+
+    it("should exist", function () {
+        expect(openGalleryModal).toBeDefined();
+    });
+
+    it("should show Modal Details", async () => {
+        inpuVar = 11007;
+        let promise = new Promise(function (resolve, reject) {
+            openGalleryModal(inpuVar);
+            setTimeout(() => resolve(true), 1000);
+        });
+        await promise;
+        expect($('#modalDetails').hasClass("show")).toBeTruthy();
     });
 
 });

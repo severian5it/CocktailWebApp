@@ -1,7 +1,51 @@
-describe("function writeToDocument()", function() {
+describe("function writeToDocument(url)", function () {
+    beforeEach(function () {
+        setFixtures(`<div class="row" id="data"></div> <div aria-hidden="true" class="modal fade" id="modalMissing" role="dialog" tabindex="-1"></div>`);
+        let url;
+        let inputVar;
+
+    });
+
+    it("should exist", function () {
+        expect(writeToDocument).toBeDefined();
+    });
+
+    it("should populate data when invoked with a letter", async () => {
+        url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=';
+        inputVar = 'a';
+        let promise = new Promise(function (resolve, reject) {
+            writeToDocument(url + inputVar);
+            setTimeout(() => resolve(true), 1000);
+        });
+        await promise;
+        expect(document.getElementById("data").innerHTML.length).toBeGreaterThan(0);
+    });
+
+    it("should populate data when invoked with an existing ingredient", async () => {
+        url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
+        inputVar = 'vodka';
+        let promise = new Promise(function (resolve, reject) {
+            writeToDocument(url + inputVar);
+            setTimeout(() => resolve(true), 1000);
+        });
+        await promise;
+        expect(document.getElementById("data").innerHTML.length).toBeGreaterThan(0);
+    });
+
+    it("should show missing modal when invoked with a missing ingredient", async () => {
+        url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
+        inputVar = 'oil';
+        let promise = new Promise(function (resolve, reject) {
+            writeToDocument(url + inputVar);
+            setTimeout(() => resolve(true), 1000);
+        });
+        await promise;
+        expect($('#modalMissing').hasClass("show")).toBeTruthy();
+    });
+
+});
+describe("initial startup values and function calls", function() {
     beforeEach(function() {
-        setFixtures(`<div class="row align-items-start" id="data"></div>`);
-        let randomUrl = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
         jasmine.clock().install();
     });
 
@@ -9,17 +53,42 @@ describe("function writeToDocument()", function() {
         jasmine.clock().uninstall();
     });
 
-    it("should exist", function() {
-        expect(writeToDocument).toBeDefined();
-    });
-
-    it("randomUrl", function() {
-        writeToDocument(randomUrl)
+    it("should call function fieldInit(9)", function() {
+        spyOn(window, 'fieldInit');
+        $(document).ready(function() { fieldInit(9); });
         jasmine.clock().tick(1000);
-        expect($("#data").length.toBeGreaterThan(1));
+        expect(window.fieldInit).toHaveBeenCalled();
     });
 
+});
+/*
+    it("write Document invoked with cocktail id should populate data", function () {
+        url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
+        inputVar = 552;
+        writeToDocument(url + inputVar);
+        expect($("#data").find("card").length).toBeGreaterThan(0);
+    });
 
+    it("write Document invoked with a letter should populate data", function () {
+        console.log(jasmine.clock().time)
+        url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=';
+        inputVar = 'a';
+        writeToDocument(url + inputVar);
+        jasmine.clock().tick(1000)
+        console.log('test', document.getElementById("data").innerHTML)
+        expect($("#data").length).toBeGreaterThan(1);
+    });
+
+    it("write Document invoked with an ingredient should populate data", function () {
+        url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=';
+        inputVar = 'vodka';
+        writeToDocument(url + inputVar);
+        jasmine.clock().tick(1000);
+        expect($("#data").length).toBeGreaterThan(1);
+    });
+*/
+
+/*
 describe("initial startup values and function calls", function() {
     beforeEach(function() {
         jasmine.clock().install();
@@ -107,7 +176,7 @@ describe("function sendMail()", function() {
         expect($(".back").length).toBe(36);
     });
 
-     */
+
 });
 
 

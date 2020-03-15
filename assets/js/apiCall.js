@@ -18,16 +18,16 @@ function writeToDocument(url) {
         data = response.drinks;
         data.forEach(function (item) {
             let dataRow = [];
-            dataRow.push('<div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-row justify-content-center">')
-            dataRow.push('<div class="card shadow-lg p-2 mb-3 bg-white rounded mt-3">')
-            dataRow.push('<div class="image">')
-            dataRow.push(`<img src=${item.strDrinkThumb} class="img-fluid" onclick="openGalleryModal(${item.idDrink})">`)
-            dataRow.push('</div>')
-            dataRow.push('<div class="card-body">')
-            dataRow.push(`<h5 class="card-title">${item.strDrink}</h5>`)
-            dataRow.push('</div>')
-            dataRow.push('</div>')
-            dataRow.push('</div>')
+            dataRow.push('<div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-row justify-content-center">');
+            dataRow.push('<div class="card shadow-lg p-2 mb-3 bg-white rounded mt-3">');
+            dataRow.push('<div class="image">');
+            dataRow.push(`<img src=${item.strDrinkThumb} class="img-fluid" onclick="openGalleryModal(${item.idDrink})">`);
+            dataRow.push('</div>');
+            dataRow.push('<div class="card-body">');
+            dataRow.push(`<h5 class="card-title">${item.strDrink}</h5>`);
+            dataRow.push('</div>');
+            dataRow.push('</div>');
+            dataRow.push('</div>');
             tableRows.push(`${dataRow}`);
         });
 
@@ -43,7 +43,7 @@ function writeToDocument(url) {
 function searchSubmit() {
     let url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
     let inputVal = document.getElementById("toSearch").value;
-    writeToDocument(url + inputVal)
+    writeToDocument(url + inputVal);
     document.getElementById("wrapper").classList.remove('wrap');
 }
 
@@ -69,10 +69,10 @@ function writeToModal(url) {
 
         data.forEach(function (item) {
             let dataRow = [];
-            dataRow.push(`<p><bold>Glass: </bold>${item.strGlass}</p>`)
-            dataRow.push(`<p><bold>Category: </bold>${item.strCategory}</p>`)
-            dataRow.push(`<p><bold>Instructions: </bold>${item.strInstructions}</p>`)
-            dataRow.push(`<p><bold>Ingredients: </bold> <ul style="list-style-type:disc;"></p>`)
+            dataRow.push(`<p><bold>Glass: </bold>${item.strGlass}</p>`);
+            dataRow.push(`<p><bold>Category: </bold>${item.strCategory}</p>`);
+            dataRow.push(`<p><bold>Instructions: </bold>${item.strInstructions}</p>`);
+            dataRow.push(`<p><bold>Ingredients: </bold> <ul style="list-style-type:disc;"></p>`);
 
             const ingredientToLoop = [{
                 "ingredient": item.strIngredient1,
@@ -108,14 +108,14 @@ function writeToModal(url) {
             function pushIngredient(item) {
                 if (item.ingredient !== null) {
                     if (item.measure !== null) {
-                        dataRow.push(`<li>${item.measure} of ${item.ingredient}</li>`)
+                        dataRow.push(`<li>${item.measure} of ${item.ingredient}</li>`);
                     } else {
-                        dataRow.push(`<li>${item.ingredient}</li>`)
+                        dataRow.push(`<li>${item.ingredient}</li>`);
                     }
                 }
             }
 
-            dataRow.push(`</ul>`)
+            dataRow.push(`</ul>`);
             tableRowsBody.push(`${dataRow}`);
         });
 
@@ -130,10 +130,10 @@ function writeToModal(url) {
         data = response.drinks;
         data.forEach(function (item) {
             var dataRow = [];
-            dataRow.push(`<h3 class="modal-title">${item.strDrink}</h3>`)
-            dataRow.push(`<button aria-label="Close" class="close" data-dismiss="modal" type="button">`)
-            dataRow.push(`<span aria-hidden="true">&times;</span>`)
-            dataRow.push(`</button>`)
+            dataRow.push(`<h3 class="modal-title">${item.strDrink}</h3>`);
+            dataRow.push(`<button aria-label="Close" class="close" data-dismiss="modal" type="button">`);
+            dataRow.push(`<span aria-hidden="true">&times;</span>`);
+            dataRow.push(`</button>`);
             tableRowsHeader.push(`${dataRow}`);
         });
 
@@ -150,7 +150,7 @@ function writeToModal(url) {
 function openGalleryModal(id) {
 
     let url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
-    writeToModal(url + id)
+    writeToModal(url + id);
     $('#modalDetails').modal('show');
 
 }
@@ -161,5 +161,5 @@ function openGalleryModal(id) {
  */
 function letterPagination(letter) {
     let url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=';
-    writeToDocument(url + letter)
+    writeToDocument(url + letter);
 }

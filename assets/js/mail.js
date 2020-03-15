@@ -10,7 +10,7 @@ function sendMail() {
             "from_name": `${name.value}`,
             "from_email": `${mail.value}`,
             "message": `${message.value}`
-        })
+        });
         $('#modalContactForm').modal('toggle');
         return true;
     }

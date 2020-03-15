@@ -68,14 +68,11 @@ front end interface that allow a the website visitor to do the following:
 This is a website allowing different kind of selection operations over the Cocktail DB, the purpose
 of the project is to allow visitors to extract information quickly and in different way.
 
-### The ideal client for this business is:
-First and foremost, potential tourists or visitors, for every period of the year. Rome is a good destination regardless
-of the season; then the site is targeting in particular:
-
-* People without means of transportation.
-* High-Spending segment, because it's located in a central and expensive neighbourhood.
-* Returning clients, who wants to keep contact.
-* Tourist that would like to enrich their experience with guided tours.
+### The potential visitors for this site are:
+First and foremost, people who never prepared a cocktail and have a little or no experience. Then
+People curious of what can prepare with what they have handy at the moment.
+Site can be also useful to More Expert people, that can browse the selection and see what they never
+prepared.
 
 ### Visitors to this website are searching for:
 * Cocktail recipe for a specific cocktail.
@@ -198,8 +195,8 @@ gradient of peaches and white, along with a simple design has been used.
 
 ### Fonts
 
-From Google Fonts has been used *Open Sans* font; for the rest of the Headings *Arial* standard font
- has been used.
+From Google Fonts has been used *Abril* and *Fatface* font; for the rest of the Headings *Roboto* 
+standard font has been used.
 
 ## Features for future releases
 - allowing visitors to search directly from landing pages, but for this some back end technologies
@@ -365,7 +362,7 @@ Really useful resources during development were:
 * [Stack Overflow](https://stackoverflow.com/)
 * [Rapid API](https://rapidapi.com/)
 
-The last provided a lot of example to place my work on.
+The last provided a lot of example to base my work on.
 
 
 ## Media
